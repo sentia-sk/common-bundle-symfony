@@ -34,7 +34,7 @@ class FileSystemWs
      */
     public function getApiInfo(): ?array
     {
-        $url = $this->params->get('synology_base_url').'/webapi/query.cgi?Api=SYNO.API.Info&version=1&method=query';
+        $url = $this->params->get('synology_base_url').'/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query';
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -55,7 +55,7 @@ class FileSystemWs
      */
     public function loginAndGetSid(): ?string
     {
-        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?Api=SYNO.API.Auth&version=6&method=login&account='
+        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=login&account='
             .$this->params->get('synology_username').'&passwd='.$this->params->get('synology_password');
         try {
             $res = $this->httpClient->request('GET', $url, [
@@ -80,7 +80,7 @@ class FileSystemWs
      */
     public function logout(): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?Api=SYNO.API.Auth&version=6&method=logout&account='
+        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=logout&account='
             .$this->params->get('synology_username').'&passwd='.$this->params->get('synology_password');
         try {
             $res = $this->httpClient->request('GET', $url, [
@@ -148,7 +148,7 @@ class FileSystemWs
      */
     public function createFolder(string $folderPath, string $folderName, string $sid): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?Api=SYNO.FileStation.CreateFolder&version=2&method=create&folder_path='.
+        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.CreateFolder&version=2&method=create&folder_path='.
             $this->sanitizePath($folderPath, true).'&name='.$this->sanitizePath($folderName, false).'&_sid='.$sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
@@ -169,7 +169,7 @@ class FileSystemWs
      */
     public function delete(string $path, string $sid): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?Api=SYNO.FileStation.Delete&version=1&method=delete&path="'.
+        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.Delete&version=1&method=delete&path="'.
             $this->sanitizePath($path, false).'"&_sid='.$sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
@@ -190,7 +190,7 @@ class FileSystemWs
      */
     public function downloadFile(string $filePath, string $sid): ?string
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?Api=SYNO.FileStation.Download&version=2&method=download&path='
+        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.Download&version=2&method=download&path='
             .$this->sanitizePath($filePath, true).'&mode=%22open%22&_sid='.$sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
