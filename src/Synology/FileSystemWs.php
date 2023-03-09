@@ -107,7 +107,7 @@ class FileSystemWs
         $cfile = new \CURLFile($sourceFilePath, 'application/octet-stream');
         $cfile->setPostFilename(basename($sourceFilePath));
         $fields = [
-            'Api' => 'SYNO.FileStation.Upload',
+            'api' => 'SYNO.FileStation.Upload',
             'version' => '2',
             'method' => 'upload',
             'path' => $destinationDirPath,
