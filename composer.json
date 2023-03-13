@@ -1,6 +1,6 @@
 {
     "name": "sentia-sk/common-bundle-symfony",
-    "description": "Common bundle for Synology and other services used in multiple projects",
+    "description": "Common bundle for services used in multiple projects",
     "type": "library",
     "minimum-stability": "stable",
     "require": {
@@ -9,14 +9,14 @@
         "ext-mbstring": "*",
         "ext-iconv": "*",
         "ext-dom": "*",
-        "ext-sodium": "*",
         "ext-calendar": "*",
         "ext-gd": "*",
         "ext-json": "*",
         "ext-pdo": "*",
         "ext-zip": "*",
         "ext-curl": "*",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "symfony/dependency-injection": "^6.2"
     },
     "license": "MIT",
     "autoload": {
