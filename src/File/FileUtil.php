@@ -82,7 +82,7 @@ class FileUtil
         return $path;
     }
 
-    public function getPathByUuid(string $basePath, string $uuid, bool $includeUuidDir = true): ?string
+    public function getPathByUuid(string $basePath, string $uuid, bool $includeUuidDir = true): string
     {
         $path = $this->createUuidBasePath($basePath, $uuid);
         if ($includeUuidDir) {
