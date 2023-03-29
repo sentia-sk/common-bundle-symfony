@@ -10,7 +10,8 @@
 - Symfony: 6.2.X
 
 ### Config ###
-- For Synology utils, there must be defined parameters in the application's `config/services.yaml`:
-`synology_base_url`, `synology_username`, `synology_password`
+Required parameters in the application's `config/services.yaml` per feature:
+- For Synology utils: `synology_base_url`, `synology_username`, `synology_password`
+- For Slack utils: `app_env`
 
     
