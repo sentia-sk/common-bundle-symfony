@@ -28,7 +28,7 @@ class SlackWs
      */
     private function sendMarkdownMessage(string $markdown, string $slackWebhook): void
     {
-        $markdownFull = null;
+        $markdownFull = '';
         if (mb_strlen($markdown) > 3000) {
             $markdownFull = $markdown;
             $markdown = substr($markdown, 0, 2999);
