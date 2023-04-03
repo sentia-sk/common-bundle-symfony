@@ -22,9 +22,6 @@ class FileSystemWs
         private string $secretKey,
         private string $region,
         private string $version,
-        private string $testBucket,
-        private string $prodBucket,
-        private string $env,
     ) {
         $this->s3Client = new S3Client([
             'credentials' => [
@@ -239,20 +236,20 @@ class FileSystemWs
         }
     }
 
-    public function amazonUploadFile(string $storageTargetPath, string $localTargetPath): void
+    public function amazonUploadFile(string $bucket, string $storageTargetPath, string $localTargetPath): void
     {
         $this->s3Client->putObject([
-            'Bucket' => $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
+            'Bucket' => $bucket,
             'Key' => $storageTargetPath,
             'Body' => fopen($localTargetPath, 'r'),
             'ACL' => self::ACL,
         ]);
     }
 
-    public function amazonDownloadFile(string $storageTargetPath): string
+    public function amazonDownloadFile(string $bucket, string $storageTargetPath): string
     {
         $result = $this->s3Client->getObject([
-            'Bucket' => $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
+            'Bucket' => $bucket,
             'Key' => $storageTargetPath
         ]);
 
@@ -263,10 +260,10 @@ class FileSystemWs
         return $result['Body'] . '\n';
     }
 
-    public function amazonDeleteFile(string $storageTargetPath): void
+    public function amazonDeleteFile(string $bucket, string $storageTargetPath): void
     {
         $this->s3Client->deleteMatchingObjects(
-            bucket: $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
+            bucket: $bucket,
             prefix: $storageTargetPath
         );
     }
