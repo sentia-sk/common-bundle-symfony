@@ -22,6 +22,9 @@ class FileSystemWs
         private string $secretKey,
         private string $region,
         private string $version,
+        private string $testBucket,
+        private string $prodBucket,
+        private string $env,
     ) {
         $this->s3Client = new S3Client([
             'credentials' => [
@@ -236,13 +239,35 @@ class FileSystemWs
         }
     }
 
-    public function uploadAmazon(string $bucket, string $storageTargetPath, string $localTargetPath): void
+    public function amazonUploadFile(string $storageTargetPath, string $localTargetPath): void
     {
         $this->s3Client->putObject([
-            'Bucket' => $bucket,
+            'Bucket' => $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
             'Key' => $storageTargetPath,
             'Body' => fopen($localTargetPath, 'r'),
             'ACL' => self::ACL,
         ]);
+    }
+
+    public function amazonDownloadFile(string $storageTargetPath): string
+    {
+        $result = $this->s3Client->getObject([
+            'Bucket' => $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
+            'Key' => $storageTargetPath
+        ]);
+
+        if(!isset($result['Body'])){
+            throw new Exception('File is corrupt or cannot be downloaded');
+        }
+
+        return $result['Body'] . '\n';
+    }
+
+    public function amazonDeleteFile(string $storageTargetPath): void
+    {
+        $this->s3Client->deleteMatchingObjects(
+            bucket: $this->env == 'dev' ? $this->testBucket : $this->prodBucket,
+            prefix: $storageTargetPath
+        );
     }
 }
