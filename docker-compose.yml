@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: 'common-bundle'
     ports:
-      - '8081:80'
+      - '8082:80'
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html

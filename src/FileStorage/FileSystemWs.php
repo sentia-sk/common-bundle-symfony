@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace SentiaSk\CommonBundleSymfony\Synology;
+namespace SentiaSk\CommonBundleSymfony\FileStorage;
 
+use Aws\S3\S3Client;
 use Exception;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
@@ -11,11 +12,26 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class FileSystemWs
 {
+    private S3Client $s3Client;
+    private const ACL = 'bucket-owner-full-control';
 
     public function __construct(
         private readonly HttpClientInterface $httpClient,
         private readonly ParameterBagInterface $params,
-    ){ }
+        private string $accessKey,
+        private string $secretKey,
+        private string $region,
+        private string $version,
+    ) {
+        $this->s3Client = new S3Client([
+            'credentials' => [
+                'key' => $this->accessKey,
+                'secret' => $this->secretKey
+            ],
+            'region' => $this->region,
+            'version' => $this->version
+        ]);
+    }
 
     /**
      * pomocna metoda, ktora upravi vstupny retazec na retazec vyhovujuci pre Synology
@@ -24,7 +40,7 @@ class FileSystemWs
     {
         $path = str_replace('/', '%2F', $path);
         if ($useBrackets) {
-            $path = '%5B%22'.$path.'%22%5D';
+            $path = '%5B%22' . $path . '%22%5D';
         }
         return $path;
     }
@@ -34,7 +50,7 @@ class FileSystemWs
      */
     public function getApiInfo(): ?array
     {
-        $url = $this->params->get('synology_base_url').'/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query';
+        $url = $this->params->get('synology_base_url') . '/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query';
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -44,7 +60,7 @@ class FileSystemWs
                 return json_decode($res->getContent(true), true);
             }
             return null;
-        } catch(ExceptionInterface) {
+        } catch (ExceptionInterface) {
             return null;
         }
     }
@@ -55,8 +71,10 @@ class FileSystemWs
      */
     public function loginAndGetSid(): ?string
     {
-        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=login&account='
-            .$this->params->get('synology_username').'&passwd='.$this->params->get('synology_password');
+        $url = $this->params->get(
+                'synology_base_url'
+            ) . '/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=login&account='
+            . $this->params->get('synology_username') . '&passwd=' . $this->params->get('synology_password');
         try {
             $res = $this->httpClient->request('GET', $url, [
                     'verify_peer' => false,
@@ -69,7 +87,7 @@ class FileSystemWs
                 return $responseJson['data']['sid'] ?? null;
             }
             return null;
-        } catch(ExceptionInterface $e) {
+        } catch (ExceptionInterface $e) {
             throw new Exception($e->getMessage());
         }
     }
@@ -80,8 +98,10 @@ class FileSystemWs
      */
     public function logout(): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=logout&account='
-            .$this->params->get('synology_username').'&passwd='.$this->params->get('synology_password');
+        $url = $this->params->get(
+                'synology_base_url'
+            ) . '/webapi/auth.cgi?api=SYNO.API.Auth&version=6&method=logout&account='
+            . $this->params->get('synology_username') . '&passwd=' . $this->params->get('synology_password');
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -90,8 +110,8 @@ class FileSystemWs
             if ($res->getStatusCode() !== 200) {
                 throw new Exception('Request logout neúspešný');
             }
-        }catch(ExceptionInterface $e){
-            throw new Exception('Request logout neúspešný:'.$e->getMessage());
+        } catch (ExceptionInterface $e) {
+            throw new Exception('Request logout neúspešný:' . $e->getMessage());
         }
     }
 
@@ -101,7 +121,7 @@ class FileSystemWs
      */
     public function uploadFile(string $destinationDirPath, string $sourceFilePath, string $sid): bool
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?_sid='.$sid;
+        $url = $this->params->get('synology_base_url') . '/webapi/entry.cgi?_sid=' . $sid;
 
         // nasledujuci postup neisiel cez symfony http client, preto je to cez curl.
         $cfile = new \CURLFile($sourceFilePath, 'application/octet-stream');
@@ -136,8 +156,8 @@ class FileSystemWs
                 curl_close($ch);
                 return true;
             }
-        } catch(Exception $e) {
-            throw new Exception($e->getMessage().'->'.$e->getTraceAsString());
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage() . '->' . $e->getTraceAsString());
         }
         return false;
     }
@@ -148,8 +168,13 @@ class FileSystemWs
      */
     public function createFolder(string $folderPath, string $folderName, string $sid): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.CreateFolder&version=2&method=create&folder_path='.
-            $this->sanitizePath($folderPath, true).'&name='.$this->sanitizePath($folderName, false).'&_sid='.$sid;
+        $url = $this->params->get(
+                'synology_base_url'
+            ) . '/webapi/entry.cgi?api=SYNO.FileStation.CreateFolder&version=2&method=create&folder_path=' .
+            $this->sanitizePath($folderPath, true) . '&name=' . $this->sanitizePath(
+                $folderName,
+                false
+            ) . '&_sid=' . $sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -158,8 +183,8 @@ class FileSystemWs
             if ($res->getStatusCode() !== 200) {
                 throw new Exception('Request createFolder neúspešný');
             }
-        } catch(ExceptionInterface $e) {
-            throw new Exception('Request createFolder neúspešný:'.$e->getMessage());
+        } catch (ExceptionInterface $e) {
+            throw new Exception('Request createFolder neúspešný:' . $e->getMessage());
         }
     }
 
@@ -169,8 +194,10 @@ class FileSystemWs
      */
     public function delete(string $path, string $sid): void
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.Delete&version=1&method=delete&path="'.
-            $this->sanitizePath($path, false).'"&_sid='.$sid;
+        $url = $this->params->get(
+                'synology_base_url'
+            ) . '/webapi/entry.cgi?api=SYNO.FileStation.Delete&version=1&method=delete&path="' .
+            $this->sanitizePath($path, false) . '"&_sid=' . $sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -179,8 +206,8 @@ class FileSystemWs
             if ($res->getStatusCode() !== 200) {
                 throw new Exception('Request delete neúspešný');
             }
-        } catch(ExceptionInterface $e) {
-            throw new Exception('Request delete neúspešný:'.$e->getMessage());
+        } catch (ExceptionInterface $e) {
+            throw new Exception('Request delete neúspešný:' . $e->getMessage());
         }
     }
 
@@ -190,8 +217,10 @@ class FileSystemWs
      */
     public function downloadFile(string $filePath, string $sid): ?string
     {
-        $url = $this->params->get('synology_base_url').'/webapi/entry.cgi?api=SYNO.FileStation.Download&version=2&method=download&path='
-            .$this->sanitizePath($filePath, true).'&mode=%22open%22&_sid='.$sid;
+        $url = $this->params->get(
+                'synology_base_url'
+            ) . '/webapi/entry.cgi?api=SYNO.FileStation.Download&version=2&method=download&path='
+            . $this->sanitizePath($filePath, true) . '&mode=%22open%22&_sid=' . $sid;
         try {
             $res = $this->httpClient->request('GET', $url, [
                 'verify_peer' => false,
@@ -202,9 +231,18 @@ class FileSystemWs
                 throw new Exception('Request download neúspešný');
             }
             return $res->getContent();
-        } catch(ExceptionInterface $e) {
-            throw new Exception('Request download neúspešný:'.$e->getMessage());
+        } catch (ExceptionInterface $e) {
+            throw new Exception('Request download neúspešný:' . $e->getMessage());
         }
     }
 
+    public function uploadAmazon(string $bucket, string $storageTargetPath, string $localTargetPath): void
+    {
+        $this->s3Client->putObject([
+            'Bucket' => $bucket,
+            'Key' => $storageTargetPath,
+            'Body' => fopen($localTargetPath, 'r'),
+            'ACL' => self::ACL,
+        ]);
+    }
 }

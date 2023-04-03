@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 - common features for sentia applications
-    - Synology
+    - Synology/Amazon Storage
     - Slack
 
 ### Requirements ###
@@ -11,7 +11,8 @@
 
 ### Config ###
 Required parameters in the application's `config/services.yaml` per feature:
-- For Synology utils: `synology_base_url`, `synology_username`, `synology_password`
+- For Synology Service utils: `synology_base_url`, `synology_username`, `synology_password`
+- For Amazon Storage Service utils: `amazon_s3_key`, `amazon_s3_secret`, `amazon_s3_region`, `amazon_s3_test_bucket`, `amazon_s3_prod_bucket`, `amazon_s3_version`
 - For Slack utils: `app_env`
 
     
