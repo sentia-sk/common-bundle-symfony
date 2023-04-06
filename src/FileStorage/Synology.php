@@ -4,33 +4,17 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\FileStorage;
 
-use Aws\S3\S3Client;
 use Exception;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class FileSystemWs
+class Synology
 {
-    private S3Client $s3Client;
-    private const ACL = 'bucket-owner-full-control';
-
     public function __construct(
         private readonly HttpClientInterface $httpClient,
         private readonly ParameterBagInterface $params,
-        private string $accessKey,
-        private string $secretKey,
-        private string $region,
-        private string $version,
     ) {
-        $this->s3Client = new S3Client([
-            'credentials' => [
-                'key' => $this->accessKey,
-                'secret' => $this->secretKey
-            ],
-            'region' => $this->region,
-            'version' => $this->version
-        ]);
     }
 
     /**
@@ -236,35 +220,4 @@ class FileSystemWs
         }
     }
 
-    public function amazonUploadFile(string $bucket, string $storageTargetPath, string $localTargetPath): void
-    {
-        $this->s3Client->putObject([
-            'Bucket' => $bucket,
-            'Key' => $storageTargetPath,
-            'Body' => fopen($localTargetPath, 'r'),
-            'ACL' => self::ACL,
-        ]);
-    }
-
-    public function amazonDownloadFile(string $bucket, string $storageTargetPath): string
-    {
-        $result = $this->s3Client->getObject([
-            'Bucket' => $bucket,
-            'Key' => $storageTargetPath
-        ]);
-
-        if(!isset($result['Body'])){
-            throw new Exception('File is corrupt or cannot be downloaded');
-        }
-
-        return $result['Body'] . '\n';
-    }
-
-    public function amazonDeleteFile(string $bucket, string $storageTargetPath): void
-    {
-        $this->s3Client->deleteMatchingObjects(
-            bucket: $bucket,
-            prefix: $storageTargetPath
-        );
-    }
 }
