@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\File;
 
+use Symfony\Component\HttpFoundation\Response;
+
 class FileUtil
 {
 
@@ -16,6 +18,30 @@ class FileUtil
         return rmdir($dir);
     }
 
+    /**
+     *
+     * @param $filename - filename aj s cestou
+     * @param $filenameClient - filename pre clienta
+     */
+    public function download(string $filename, string $filenameClient): Response
+    {
+        $response = new Response();
+        $response->headers->set('Cache-Control', 'private');
+        $response->headers->set('Content-type', $this->getMimeType($filename));
+        $response->headers->set('Content-Disposition', 'attachment; filename="' . $filenameClient . '";');
+        $response->headers->set('Content-length', (string)filesize($filename));
+        $response->sendHeaders(); // send header before outputting anything
+        $response->setContent(file_get_contents($filename));
+        return $response;
+    }
+
+    private function getMimeType($filename): string
+    {
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mimeType = finfo_file($finfo, $filename);
+        finfo_close($finfo);
+        return $mimeType;
+    }
     /**
      * z adresara vymaze vsetky subory a adresare. Zakladny vstupny adresar ponecha
      */
