@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\File;
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Uid\Uuid;
-
 class FileUtil
 {
 
@@ -30,6 +27,17 @@ class FileUtil
         }
     }
 
+    /**
+     * check if directory is empty (no files, no subdirs)
+     */
+    public function isEmptyDir(string $pathToDir): bool
+    {
+        $res = scandir($pathToDir);
+        if ($res === false) {
+            return false;
+        }
+        return count($res) == 2;
+    }
 
     /**
      * na vstupe by mala byt validna adresarova cesta, napr: x/y/z/u
@@ -43,7 +51,7 @@ class FileUtil
         if($baseDirString !== ''){
             $baseDirs = explode(':', $baseDirString);
             foreach($baseDirs as $baseDir){
-                if(substr($dirPath, 0, strlen($baseDir)) === $baseDir){
+                if(str_starts_with($dirPath, $baseDir)){
                     $forbiddenDir = $baseDir;
                     break;
                 }
@@ -55,7 +63,7 @@ class FileUtil
             $path = $parts[0];
             for($i=1; $i<$count; $i++){
                 $path .= '/'.$parts[$i];
-                if($forbiddenDir !== null && substr($forbiddenDir, 0, strlen($path)) === $path){
+                if($forbiddenDir !== null && str_starts_with($forbiddenDir, $path)){
                     continue;
                 }
                 if(!is_dir($path) && !mkdir($path)){
@@ -89,6 +97,44 @@ class FileUtil
             $path .= '/' . $uuid;
         }
         return $path;
+    }
+
+    /**
+     * use this method if uuid file is deleted. Empty folders will be deleted
+     */
+    public function clearUuid4Dirs(string $basePath, string $uuid, bool $includeUuidDir = true): void
+    {
+        $dirPart1 = $uuid[0].$uuid[1];
+        $dirPart2 = $uuid[2].$uuid[3];
+        $dirPart3 = $uuid[4].$uuid[5];
+        $dirPart4 = $uuid[6].$uuid[7];
+
+        if ($includeUuidDir) {
+            $path = $basePath.'/'.$dirPart1.'/'.$dirPart2.'/'.$dirPart3.'/'.$dirPart4.'/'.$uuid;
+            if(is_dir($path) && $this->isEmptyDir($path)){
+                rmdir($path);
+            }
+        }
+
+        $path = $basePath.'/'.$dirPart1.'/'.$dirPart2.'/'.$dirPart3.'/'.$dirPart4;
+        if (is_dir($path) && $this->isEmptyDir($path)) {
+            rmdir($path);
+        }
+
+        $path = $basePath.'/'.$dirPart1.'/'.$dirPart2.'/'.$dirPart3;
+        if (is_dir($path) && $this->isEmptyDir($path)) {
+            rmdir($path);
+        }
+
+        $path = $basePath.'/'.$dirPart1.'/'.$dirPart2;
+        if (is_dir($path) && $this->isEmptyDir($path)) {
+            rmdir($path);
+        }
+
+        $path = $basePath.'/'.$dirPart1;
+        if (is_dir($path) && $this->isEmptyDir($path)) {
+            rmdir($path);
+        }
     }
 
     private function createUuidBasePath(string $basePath, string $uuid): string
