@@ -14,9 +14,9 @@ class AbstractTransaction
         public string $mena,
         public float $suma,
         public DateTime $datumPrevodu,
-        public string|null $ks,
         public string $vs,
-        public string|null $ss,
+        public string|null $ks = null,
+        public string|null $ss = null,
         public string|null $popis = null,
         public string|null $popis2 = null
     ) {

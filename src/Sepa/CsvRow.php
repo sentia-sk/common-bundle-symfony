@@ -20,9 +20,9 @@ class CsvRow extends AbstractTransaction
         public string $mena,
         public float $suma,
         public DateTime $datumPrevodu,
-        public string|null $ks,
         public string $vs,
-        public string|null $ss,
+        public string|null $ks = null,
+        public string|null $ss = null,
         public string|null $popis = null,
         public string|null $popis2 = null
     ) {
@@ -49,6 +49,6 @@ class CsvRow extends AbstractTransaction
         if (count($c) < 11) {
             throw new Exception('Zlý formát, riadok: '.(self::$rowCounter + 1));
         }
-        return new self($c[0], $c[1], $c[3], (float)$c[4], new DateTime($c[5]), $c[6], $c[7], $c[8], $c[9], $c[10]);
+        return new self($c[0], $c[1], $c[3], (float)$c[4], new DateTime($c[5]), $c[7], $c[8], $c[6], $c[9], $c[10]);
     }
 }
