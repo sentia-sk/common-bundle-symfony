@@ -32,8 +32,8 @@ class Transaction extends AbstractTransaction
             $this->mena,
             $this->suma,
             $this->datumPrevodu,
-            $this->ks,
             $this->vs,
+            $this->ks,
             $this->ss,
             $this->popis,
             $this->popis2
