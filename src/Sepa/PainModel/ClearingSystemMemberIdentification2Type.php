@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing ClearingSystemMemberIdentification2Type
@@ -11,7 +11,7 @@ class ClearingSystemMemberIdentification2Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId
      */
     private $clrSysId = null;
 
@@ -23,7 +23,7 @@ class ClearingSystemMemberIdentification2Type
     /**
      * Gets as clrSysId
      *
-     * @return \App\Model\Sepa\PainModel\ClearingSystemIdentification2ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemIdentification2ChoiceType
      */
     public function getClrSysId()
     {
@@ -33,10 +33,10 @@ class ClearingSystemMemberIdentification2Type
     /**
      * Sets a new clrSysId
      *
-     * @param \App\Model\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId
      * @return self
      */
-    public function setClrSysId(\App\Model\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId)
+    public function setClrSysId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemIdentification2ChoiceType $clrSysId)
     {
         $this->clrSysId = $clrSysId;
         return $this;

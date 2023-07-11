@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing CashAccount24Type
@@ -11,12 +11,12 @@ class CashAccount24Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\AccountIdentification4ChoiceType $id
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType $id
      */
     private $id = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccountType2ChoiceType $tp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccountType2ChoiceType $tp
      */
     private $tp = null;
 
@@ -33,7 +33,7 @@ class CashAccount24Type
     /**
      * Gets as id
      *
-     * @return \App\Model\Sepa\PainModel\AccountIdentification4ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType
      */
     public function getId()
     {
@@ -43,10 +43,10 @@ class CashAccount24Type
     /**
      * Sets a new id
      *
-     * @param \App\Model\Sepa\PainModel\AccountIdentification4ChoiceType $id
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType $id
      * @return self
      */
-    public function setId(\App\Model\Sepa\PainModel\AccountIdentification4ChoiceType $id)
+    public function setId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType $id)
     {
         $this->id = $id;
         return $this;
@@ -55,7 +55,7 @@ class CashAccount24Type
     /**
      * Gets as tp
      *
-     * @return \App\Model\Sepa\PainModel\CashAccountType2ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccountType2ChoiceType
      */
     public function getTp()
     {
@@ -65,10 +65,10 @@ class CashAccount24Type
     /**
      * Sets a new tp
      *
-     * @param \App\Model\Sepa\PainModel\CashAccountType2ChoiceType $tp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccountType2ChoiceType $tp
      * @return self
      */
-    public function setTp(\App\Model\Sepa\PainModel\CashAccountType2ChoiceType $tp)
+    public function setTp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccountType2ChoiceType $tp)
     {
         $this->tp = $tp;
         return $this;

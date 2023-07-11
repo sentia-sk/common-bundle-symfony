@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing DiscountAmountAndType1Type
@@ -11,19 +11,19 @@ class DiscountAmountAndType1Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\DiscountAmountType1ChoiceType $tp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountType1ChoiceType $tp
      */
     private $tp = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
      */
     private $amt = null;
 
     /**
      * Gets as tp
      *
-     * @return \App\Model\Sepa\PainModel\DiscountAmountType1ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountType1ChoiceType
      */
     public function getTp()
     {
@@ -33,10 +33,10 @@ class DiscountAmountAndType1Type
     /**
      * Sets a new tp
      *
-     * @param \App\Model\Sepa\PainModel\DiscountAmountType1ChoiceType $tp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountType1ChoiceType $tp
      * @return self
      */
-    public function setTp(\App\Model\Sepa\PainModel\DiscountAmountType1ChoiceType $tp)
+    public function setTp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountType1ChoiceType $tp)
     {
         $this->tp = $tp;
         return $this;
@@ -45,7 +45,7 @@ class DiscountAmountAndType1Type
     /**
      * Gets as amt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getAmt()
     {
@@ -55,10 +55,10 @@ class DiscountAmountAndType1Type
     /**
      * Sets a new amt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
      * @return self
      */
-    public function setAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt)
+    public function setAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt)
     {
         $this->amt = $amt;
         return $this;

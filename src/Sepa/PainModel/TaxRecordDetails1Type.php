@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxRecordDetails1Type
@@ -11,19 +11,19 @@ class TaxRecordDetails1Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxPeriod1Type $prd
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd
      */
     private $prd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
      */
     private $amt = null;
 
     /**
      * Gets as prd
      *
-     * @return \App\Model\Sepa\PainModel\TaxPeriod1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type
      */
     public function getPrd()
     {
@@ -33,10 +33,10 @@ class TaxRecordDetails1Type
     /**
      * Sets a new prd
      *
-     * @param \App\Model\Sepa\PainModel\TaxPeriod1Type $prd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd
      * @return self
      */
-    public function setPrd(\App\Model\Sepa\PainModel\TaxPeriod1Type $prd)
+    public function setPrd(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd)
     {
         $this->prd = $prd;
         return $this;
@@ -45,7 +45,7 @@ class TaxRecordDetails1Type
     /**
      * Gets as amt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getAmt()
     {
@@ -55,10 +55,10 @@ class TaxRecordDetails1Type
     /**
      * Sets a new amt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt
      * @return self
      */
-    public function setAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt)
+    public function setAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $amt)
     {
         $this->amt = $amt;
         return $this;

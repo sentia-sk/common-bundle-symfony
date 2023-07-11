@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing Party11ChoiceType
@@ -11,19 +11,19 @@ class Party11ChoiceType
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\OrganisationIdentification8Type $orgId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\OrganisationIdentification8Type $orgId
      */
     private $orgId = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PersonIdentification5Type $prvtId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentification5Type $prvtId
      */
     private $prvtId = null;
 
     /**
      * Gets as orgId
      *
-     * @return \App\Model\Sepa\PainModel\OrganisationIdentification8Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\OrganisationIdentification8Type
      */
     public function getOrgId()
     {
@@ -33,10 +33,10 @@ class Party11ChoiceType
     /**
      * Sets a new orgId
      *
-     * @param \App\Model\Sepa\PainModel\OrganisationIdentification8Type $orgId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\OrganisationIdentification8Type $orgId
      * @return self
      */
-    public function setOrgId(\App\Model\Sepa\PainModel\OrganisationIdentification8Type $orgId)
+    public function setOrgId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\OrganisationIdentification8Type $orgId)
     {
         $this->orgId = $orgId;
         return $this;
@@ -45,7 +45,7 @@ class Party11ChoiceType
     /**
      * Gets as prvtId
      *
-     * @return \App\Model\Sepa\PainModel\PersonIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentification5Type
      */
     public function getPrvtId()
     {
@@ -55,10 +55,10 @@ class Party11ChoiceType
     /**
      * Sets a new prvtId
      *
-     * @param \App\Model\Sepa\PainModel\PersonIdentification5Type $prvtId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentification5Type $prvtId
      * @return self
      */
-    public function setPrvtId(\App\Model\Sepa\PainModel\PersonIdentification5Type $prvtId)
+    public function setPrvtId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentification5Type $prvtId)
     {
         $this->prvtId = $prvtId;
         return $this;

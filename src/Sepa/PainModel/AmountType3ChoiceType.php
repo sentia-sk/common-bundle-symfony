@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing AmountType3ChoiceType
@@ -11,19 +11,19 @@ class AmountType3ChoiceType
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt
      */
     private $instdAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt
      */
     private $eqvtAmt = null;
 
     /**
      * Gets as instdAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getInstdAmt()
     {
@@ -33,10 +33,10 @@ class AmountType3ChoiceType
     /**
      * Sets a new instdAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt
      * @return self
      */
-    public function setInstdAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt)
+    public function setInstdAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $instdAmt)
     {
         $this->instdAmt = $instdAmt;
         return $this;
@@ -45,7 +45,7 @@ class AmountType3ChoiceType
     /**
      * Gets as eqvtAmt
      *
-     * @return \App\Model\Sepa\PainModel\EquivalentAmount2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\EquivalentAmount2Type
      */
     public function getEqvtAmt()
     {
@@ -55,10 +55,10 @@ class AmountType3ChoiceType
     /**
      * Sets a new eqvtAmt
      *
-     * @param \App\Model\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt
      * @return self
      */
-    public function setEqvtAmt(\App\Model\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt)
+    public function setEqvtAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\EquivalentAmount2Type $eqvtAmt)
     {
         $this->eqvtAmt = $eqvtAmt;
         return $this;

@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing CustomerCreditTransferInitiationV05Type
@@ -11,24 +11,24 @@ class CustomerCreditTransferInitiationV05Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\GroupHeader48Type $grpHdr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GroupHeader48Type $grpHdr
      */
     private $grpHdr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PaymentInstruction9Type[] $pmtInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type[] $pmtInf
      */
     private $pmtInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
      */
     private $splmtryData = null;
 
     /**
      * Gets as grpHdr
      *
-     * @return \App\Model\Sepa\PainModel\GroupHeader48Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GroupHeader48Type
      */
     public function getGrpHdr()
     {
@@ -38,10 +38,10 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Sets a new grpHdr
      *
-     * @param \App\Model\Sepa\PainModel\GroupHeader48Type $grpHdr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GroupHeader48Type $grpHdr
      * @return self
      */
-    public function setGrpHdr(\App\Model\Sepa\PainModel\GroupHeader48Type $grpHdr)
+    public function setGrpHdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\GroupHeader48Type $grpHdr)
     {
         $this->grpHdr = $grpHdr;
         return $this;
@@ -50,10 +50,10 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Adds as pmtInf
      *
-     * @param \App\Model\Sepa\PainModel\PaymentInstruction9Type $pmtInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type $pmtInf
      *@return self
      */
-    public function addToPmtInf(\App\Model\Sepa\PainModel\PaymentInstruction9Type $pmtInf)
+    public function addToPmtInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type $pmtInf)
     {
         $this->pmtInf[] = $pmtInf;
         return $this;
@@ -84,7 +84,7 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Gets as pmtInf
      *
-     * @return \App\Model\Sepa\PainModel\PaymentInstruction9Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type[]
      */
     public function getPmtInf()
     {
@@ -94,7 +94,7 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Sets a new pmtInf
      *
-     * @param \App\Model\Sepa\PainModel\PaymentInstruction9Type[] $pmtInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type[] $pmtInf
      * @return self
      */
     public function setPmtInf(array $pmtInf)
@@ -106,10 +106,10 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Adds as splmtryData
      *
-     * @param \App\Model\Sepa\PainModel\SupplementaryData1Type $splmtryData
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type $splmtryData
      *@return self
      */
-    public function addToSplmtryData(\App\Model\Sepa\PainModel\SupplementaryData1Type $splmtryData)
+    public function addToSplmtryData(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type $splmtryData)
     {
         $this->splmtryData[] = $splmtryData;
         return $this;
@@ -140,7 +140,7 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Gets as splmtryData
      *
-     * @return \App\Model\Sepa\PainModel\SupplementaryData1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[]
      */
     public function getSplmtryData()
     {
@@ -150,7 +150,7 @@ class CustomerCreditTransferInitiationV05Type
     /**
      * Sets a new splmtryData
      *
-     * @param \App\Model\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
      * @return self
      */
     public function setSplmtryData(array $splmtryData)

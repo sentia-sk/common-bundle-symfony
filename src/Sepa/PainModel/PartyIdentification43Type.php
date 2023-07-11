@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing PartyIdentification43Type
@@ -16,12 +16,12 @@ class PartyIdentification43Type
     private $nm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      */
     private $pstlAdr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\Party11ChoiceType $id
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Party11ChoiceType $id
      */
     private $id = null;
 
@@ -31,7 +31,7 @@ class PartyIdentification43Type
     private $ctryOfRes = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ContactDetails2Type $ctctDtls
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ContactDetails2Type $ctctDtls
      */
     private $ctctDtls = null;
 
@@ -60,7 +60,7 @@ class PartyIdentification43Type
     /**
      * Gets as pstlAdr
      *
-     * @return \App\Model\Sepa\PainModel\PostalAddress6Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type
      */
     public function getPstlAdr()
     {
@@ -70,10 +70,10 @@ class PartyIdentification43Type
     /**
      * Sets a new pstlAdr
      *
-     * @param \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      * @return self
      */
-    public function setPstlAdr(\App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr)
+    public function setPstlAdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr)
     {
         $this->pstlAdr = $pstlAdr;
         return $this;
@@ -82,7 +82,7 @@ class PartyIdentification43Type
     /**
      * Gets as id
      *
-     * @return \App\Model\Sepa\PainModel\Party11ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Party11ChoiceType
      */
     public function getId()
     {
@@ -92,10 +92,10 @@ class PartyIdentification43Type
     /**
      * Sets a new id
      *
-     * @param \App\Model\Sepa\PainModel\Party11ChoiceType $id
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Party11ChoiceType $id
      * @return self
      */
-    public function setId(\App\Model\Sepa\PainModel\Party11ChoiceType $id)
+    public function setId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\Party11ChoiceType $id)
     {
         $this->id = $id;
         return $this;
@@ -126,7 +126,7 @@ class PartyIdentification43Type
     /**
      * Gets as ctctDtls
      *
-     * @return \App\Model\Sepa\PainModel\ContactDetails2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ContactDetails2Type
      */
     public function getCtctDtls()
     {
@@ -136,10 +136,10 @@ class PartyIdentification43Type
     /**
      * Sets a new ctctDtls
      *
-     * @param \App\Model\Sepa\PainModel\ContactDetails2Type $ctctDtls
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ContactDetails2Type $ctctDtls
      * @return self
      */
-    public function setCtctDtls(\App\Model\Sepa\PainModel\ContactDetails2Type $ctctDtls)
+    public function setCtctDtls(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ContactDetails2Type $ctctDtls)
     {
         $this->ctctDtls = $ctctDtls;
         return $this;

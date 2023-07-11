@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing PaymentTypeInformation19Type
@@ -16,17 +16,17 @@ class PaymentTypeInformation19Type
     private $instrPrty = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl
      */
     private $svcLvl = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm
      */
     private $lclInstrm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp
      */
     private $ctgyPurp = null;
 
@@ -55,7 +55,7 @@ class PaymentTypeInformation19Type
     /**
      * Gets as svcLvl
      *
-     * @return \App\Model\Sepa\PainModel\ServiceLevel8ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType
      */
     public function getSvcLvl()
     {
@@ -65,10 +65,10 @@ class PaymentTypeInformation19Type
     /**
      * Sets a new svcLvl
      *
-     * @param \App\Model\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl
      * @return self
      */
-    public function setSvcLvl(\App\Model\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl)
+    public function setSvcLvl(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType $svcLvl)
     {
         $this->svcLvl = $svcLvl;
         return $this;
@@ -77,7 +77,7 @@ class PaymentTypeInformation19Type
     /**
      * Gets as lclInstrm
      *
-     * @return \App\Model\Sepa\PainModel\LocalInstrument2ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\LocalInstrument2ChoiceType
      */
     public function getLclInstrm()
     {
@@ -87,10 +87,10 @@ class PaymentTypeInformation19Type
     /**
      * Sets a new lclInstrm
      *
-     * @param \App\Model\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm
      * @return self
      */
-    public function setLclInstrm(\App\Model\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm)
+    public function setLclInstrm(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\LocalInstrument2ChoiceType $lclInstrm)
     {
         $this->lclInstrm = $lclInstrm;
         return $this;
@@ -99,7 +99,7 @@ class PaymentTypeInformation19Type
     /**
      * Gets as ctgyPurp
      *
-     * @return \App\Model\Sepa\PainModel\CategoryPurpose1ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CategoryPurpose1ChoiceType
      */
     public function getCtgyPurp()
     {
@@ -109,10 +109,10 @@ class PaymentTypeInformation19Type
     /**
      * Sets a new ctgyPurp
      *
-     * @param \App\Model\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp
      * @return self
      */
-    public function setCtgyPurp(\App\Model\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp)
+    public function setCtgyPurp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CategoryPurpose1ChoiceType $ctgyPurp)
     {
         $this->ctgyPurp = $ctgyPurp;
         return $this;

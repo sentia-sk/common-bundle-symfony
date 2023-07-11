@@ -4,25 +4,25 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\Sepa;
 
-use App\Model\Sepa\PainModel\AccountIdentification4ChoiceType;
-use App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType;
-use App\Model\Sepa\PainModel\AmountType3ChoiceType;
-use App\Model\Sepa\PainModel\Authorisation1ChoiceType;
-use App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type;
-use App\Model\Sepa\PainModel\CashAccount24Type;
-use App\Model\Sepa\PainModel\CreditTransferTransaction6Type;
-use App\Model\Sepa\PainModel\CustomerCreditTransferInitiationV05Type;
-use App\Model\Sepa\PainModel\Document;
-use App\Model\Sepa\PainModel\FinancialInstitutionIdentification8Type;
-use App\Model\Sepa\PainModel\GroupHeader48Type;
-use App\Model\Sepa\PainModel\PartyIdentification43Type;
-use App\Model\Sepa\PainModel\PaymentIdentification1Type;
-use App\Model\Sepa\PainModel\PaymentInstruction9Type;
-use App\Model\Sepa\PainModel\PaymentTypeInformation19Type;
-use App\Model\Sepa\PainModel\RemittanceInformation7Type;
-use App\Model\Sepa\PainModel\ServiceLevel8ChoiceType;
 use DateTime;
 use Exception;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\CustomerCreditTransferInitiationV05Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\Document;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\FinancialInstitutionIdentification8Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\GroupHeader48Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentIdentification1Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentInstruction9Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceInformation7Type;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType;
 
 class SepaConverter
 {

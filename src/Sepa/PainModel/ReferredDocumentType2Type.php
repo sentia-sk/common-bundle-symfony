@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing ReferredDocumentType2Type
@@ -11,7 +11,7 @@ class ReferredDocumentType2Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry
      */
     private $cdOrPrtry = null;
 
@@ -23,7 +23,7 @@ class ReferredDocumentType2Type
     /**
      * Gets as cdOrPrtry
      *
-     * @return \App\Model\Sepa\PainModel\ReferredDocumentType1ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType1ChoiceType
      */
     public function getCdOrPrtry()
     {
@@ -33,10 +33,10 @@ class ReferredDocumentType2Type
     /**
      * Sets a new cdOrPrtry
      *
-     * @param \App\Model\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry
      * @return self
      */
-    public function setCdOrPrtry(\App\Model\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry)
+    public function setCdOrPrtry(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType1ChoiceType $cdOrPrtry)
     {
         $this->cdOrPrtry = $cdOrPrtry;
         return $this;

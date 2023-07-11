@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxParty2Type
@@ -26,7 +26,7 @@ class TaxParty2Type
     private $taxTp = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxAuthorisation1Type $authstn
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAuthorisation1Type $authstn
      */
     private $authstn = null;
 
@@ -99,7 +99,7 @@ class TaxParty2Type
     /**
      * Gets as authstn
      *
-     * @return \App\Model\Sepa\PainModel\TaxAuthorisation1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAuthorisation1Type
      */
     public function getAuthstn()
     {
@@ -109,10 +109,10 @@ class TaxParty2Type
     /**
      * Sets a new authstn
      *
-     * @param \App\Model\Sepa\PainModel\TaxAuthorisation1Type $authstn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAuthorisation1Type $authstn
      * @return self
      */
-    public function setAuthstn(\App\Model\Sepa\PainModel\TaxAuthorisation1Type $authstn)
+    public function setAuthstn(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAuthorisation1Type $authstn)
     {
         $this->authstn = $authstn;
         return $this;

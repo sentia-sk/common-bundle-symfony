@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing CreditorReferenceInformation2Type
@@ -11,7 +11,7 @@ class CreditorReferenceInformation2Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\CreditorReferenceType2Type $tp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceType2Type $tp
      */
     private $tp = null;
 
@@ -23,7 +23,7 @@ class CreditorReferenceInformation2Type
     /**
      * Gets as tp
      *
-     * @return \App\Model\Sepa\PainModel\CreditorReferenceType2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceType2Type
      */
     public function getTp()
     {
@@ -33,10 +33,10 @@ class CreditorReferenceInformation2Type
     /**
      * Sets a new tp
      *
-     * @param \App\Model\Sepa\PainModel\CreditorReferenceType2Type $tp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceType2Type $tp
      * @return self
      */
-    public function setTp(\App\Model\Sepa\PainModel\CreditorReferenceType2Type $tp)
+    public function setTp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceType2Type $tp)
     {
         $this->tp = $tp;
         return $this;

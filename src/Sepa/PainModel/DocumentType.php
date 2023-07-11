@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing DocumentType
@@ -11,14 +11,14 @@ class DocumentType
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn
      */
     private $cstmrCdtTrfInitn = null;
 
     /**
      * Gets as cstmrCdtTrfInitn
      *
-     * @return \App\Model\Sepa\PainModel\CustomerCreditTransferInitiationV05Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CustomerCreditTransferInitiationV05Type
      */
     public function getCstmrCdtTrfInitn()
     {
@@ -28,10 +28,10 @@ class DocumentType
     /**
      * Sets a new cstmrCdtTrfInitn
      *
-     * @param \App\Model\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn
      * @return self
      */
-    public function setCstmrCdtTrfInitn(\App\Model\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn)
+    public function setCstmrCdtTrfInitn(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CustomerCreditTransferInitiationV05Type $cstmrCdtTrfInitn)
     {
         $this->cstmrCdtTrfInitn = $cstmrCdtTrfInitn;
         return $this;

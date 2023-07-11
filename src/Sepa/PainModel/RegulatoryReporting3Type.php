@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing RegulatoryReporting3Type
@@ -16,12 +16,12 @@ class RegulatoryReporting3Type
     private $dbtCdtRptgInd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\RegulatoryAuthority2Type $authrty
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryAuthority2Type $authrty
      */
     private $authrty = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\StructuredRegulatoryReporting3Type[] $dtls
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRegulatoryReporting3Type[] $dtls
      */
     private $dtls = null;
 
@@ -50,7 +50,7 @@ class RegulatoryReporting3Type
     /**
      * Gets as authrty
      *
-     * @return \App\Model\Sepa\PainModel\RegulatoryAuthority2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryAuthority2Type
      */
     public function getAuthrty()
     {
@@ -60,10 +60,10 @@ class RegulatoryReporting3Type
     /**
      * Sets a new authrty
      *
-     * @param \App\Model\Sepa\PainModel\RegulatoryAuthority2Type $authrty
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryAuthority2Type $authrty
      * @return self
      */
-    public function setAuthrty(\App\Model\Sepa\PainModel\RegulatoryAuthority2Type $authrty)
+    public function setAuthrty(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryAuthority2Type $authrty)
     {
         $this->authrty = $authrty;
         return $this;
@@ -72,10 +72,10 @@ class RegulatoryReporting3Type
     /**
      * Adds as dtls
      *
-     * @param \App\Model\Sepa\PainModel\StructuredRegulatoryReporting3Type $dtls
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRegulatoryReporting3Type $dtls
      *@return self
      */
-    public function addToDtls(\App\Model\Sepa\PainModel\StructuredRegulatoryReporting3Type $dtls)
+    public function addToDtls(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRegulatoryReporting3Type $dtls)
     {
         $this->dtls[] = $dtls;
         return $this;
@@ -106,7 +106,7 @@ class RegulatoryReporting3Type
     /**
      * Gets as dtls
      *
-     * @return \App\Model\Sepa\PainModel\StructuredRegulatoryReporting3Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRegulatoryReporting3Type[]
      */
     public function getDtls()
     {
@@ -116,7 +116,7 @@ class RegulatoryReporting3Type
     /**
      * Sets a new dtls
      *
-     * @param \App\Model\Sepa\PainModel\StructuredRegulatoryReporting3Type[] $dtls
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRegulatoryReporting3Type[] $dtls
      * @return self
      */
     public function setDtls(array $dtls)

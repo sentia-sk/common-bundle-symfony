@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing GroupHeader48Type
@@ -21,7 +21,7 @@ class GroupHeader48Type
     private $creDtTm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\Authorisation1ChoiceType[] $authstn
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType[] $authstn
      */
     private $authstn = null;
 
@@ -36,12 +36,12 @@ class GroupHeader48Type
     private $ctrlSum = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $initgPty
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $initgPty
      */
     private $initgPty = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt
      */
     private $fwdgAgt = null;
 
@@ -92,10 +92,10 @@ class GroupHeader48Type
     /**
      * Adds as authstn
      *
-     * @param \App\Model\Sepa\PainModel\Authorisation1ChoiceType $authstn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType $authstn
      *@return self
      */
-    public function addToAuthstn(\App\Model\Sepa\PainModel\Authorisation1ChoiceType $authstn)
+    public function addToAuthstn(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType $authstn)
     {
         $this->authstn[] = $authstn;
         return $this;
@@ -126,7 +126,7 @@ class GroupHeader48Type
     /**
      * Gets as authstn
      *
-     * @return \App\Model\Sepa\PainModel\Authorisation1ChoiceType[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType[]
      */
     public function getAuthstn()
     {
@@ -136,7 +136,7 @@ class GroupHeader48Type
     /**
      * Sets a new authstn
      *
-     * @param \App\Model\Sepa\PainModel\Authorisation1ChoiceType[] $authstn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Authorisation1ChoiceType[] $authstn
      * @return self
      */
     public function setAuthstn(array $authstn)
@@ -192,7 +192,7 @@ class GroupHeader48Type
     /**
      * Gets as initgPty
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getInitgPty()
     {
@@ -202,10 +202,10 @@ class GroupHeader48Type
     /**
      * Sets a new initgPty
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $initgPty
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $initgPty
      * @return self
      */
-    public function setInitgPty(\App\Model\Sepa\PainModel\PartyIdentification43Type $initgPty)
+    public function setInitgPty(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $initgPty)
     {
         $this->initgPty = $initgPty;
         return $this;
@@ -214,7 +214,7 @@ class GroupHeader48Type
     /**
      * Gets as fwdgAgt
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getFwdgAgt()
     {
@@ -224,10 +224,10 @@ class GroupHeader48Type
     /**
      * Sets a new fwdgAgt
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt
      * @return self
      */
-    public function setFwdgAgt(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt)
+    public function setFwdgAgt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $fwdgAgt)
     {
         $this->fwdgAgt = $fwdgAgt;
         return $this;

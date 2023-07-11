@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing RemittanceAmount2Type
@@ -11,39 +11,39 @@ class RemittanceAmount2Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt
      */
     private $duePyblAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\DiscountAmountAndType1Type[] $dscntApldAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountAndType1Type[] $dscntApldAmt
      */
     private $dscntApldAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt
      */
     private $cdtNoteAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxAmountAndType1Type[] $taxAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmountAndType1Type[] $taxAmt
      */
     private $taxAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\DocumentAdjustment1Type[] $adjstmntAmtAndRsn
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DocumentAdjustment1Type[] $adjstmntAmtAndRsn
      */
     private $adjstmntAmtAndRsn = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt
      */
     private $rmtdAmt = null;
 
     /**
      * Gets as duePyblAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getDuePyblAmt()
     {
@@ -53,10 +53,10 @@ class RemittanceAmount2Type
     /**
      * Sets a new duePyblAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt
      * @return self
      */
-    public function setDuePyblAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt)
+    public function setDuePyblAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $duePyblAmt)
     {
         $this->duePyblAmt = $duePyblAmt;
         return $this;
@@ -65,10 +65,10 @@ class RemittanceAmount2Type
     /**
      * Adds as dscntApldAmt
      *
-     * @param \App\Model\Sepa\PainModel\DiscountAmountAndType1Type $dscntApldAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountAndType1Type $dscntApldAmt
      *@return self
      */
-    public function addToDscntApldAmt(\App\Model\Sepa\PainModel\DiscountAmountAndType1Type $dscntApldAmt)
+    public function addToDscntApldAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountAndType1Type $dscntApldAmt)
     {
         $this->dscntApldAmt[] = $dscntApldAmt;
         return $this;
@@ -99,7 +99,7 @@ class RemittanceAmount2Type
     /**
      * Gets as dscntApldAmt
      *
-     * @return \App\Model\Sepa\PainModel\DiscountAmountAndType1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountAndType1Type[]
      */
     public function getDscntApldAmt()
     {
@@ -109,7 +109,7 @@ class RemittanceAmount2Type
     /**
      * Sets a new dscntApldAmt
      *
-     * @param \App\Model\Sepa\PainModel\DiscountAmountAndType1Type[] $dscntApldAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DiscountAmountAndType1Type[] $dscntApldAmt
      * @return self
      */
     public function setDscntApldAmt(array $dscntApldAmt)
@@ -121,7 +121,7 @@ class RemittanceAmount2Type
     /**
      * Gets as cdtNoteAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getCdtNoteAmt()
     {
@@ -131,10 +131,10 @@ class RemittanceAmount2Type
     /**
      * Sets a new cdtNoteAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt
      * @return self
      */
-    public function setCdtNoteAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt)
+    public function setCdtNoteAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $cdtNoteAmt)
     {
         $this->cdtNoteAmt = $cdtNoteAmt;
         return $this;
@@ -143,10 +143,10 @@ class RemittanceAmount2Type
     /**
      * Adds as taxAmt
      *
-     * @param \App\Model\Sepa\PainModel\TaxAmountAndType1Type $taxAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmountAndType1Type $taxAmt
      *@return self
      */
-    public function addToTaxAmt(\App\Model\Sepa\PainModel\TaxAmountAndType1Type $taxAmt)
+    public function addToTaxAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmountAndType1Type $taxAmt)
     {
         $this->taxAmt[] = $taxAmt;
         return $this;
@@ -177,7 +177,7 @@ class RemittanceAmount2Type
     /**
      * Gets as taxAmt
      *
-     * @return \App\Model\Sepa\PainModel\TaxAmountAndType1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmountAndType1Type[]
      */
     public function getTaxAmt()
     {
@@ -187,7 +187,7 @@ class RemittanceAmount2Type
     /**
      * Sets a new taxAmt
      *
-     * @param \App\Model\Sepa\PainModel\TaxAmountAndType1Type[] $taxAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmountAndType1Type[] $taxAmt
      * @return self
      */
     public function setTaxAmt(array $taxAmt)
@@ -199,10 +199,10 @@ class RemittanceAmount2Type
     /**
      * Adds as adjstmntAmtAndRsn
      *
-     * @param \App\Model\Sepa\PainModel\DocumentAdjustment1Type $adjstmntAmtAndRsn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DocumentAdjustment1Type $adjstmntAmtAndRsn
      *@return self
      */
-    public function addToAdjstmntAmtAndRsn(\App\Model\Sepa\PainModel\DocumentAdjustment1Type $adjstmntAmtAndRsn)
+    public function addToAdjstmntAmtAndRsn(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\DocumentAdjustment1Type $adjstmntAmtAndRsn)
     {
         $this->adjstmntAmtAndRsn[] = $adjstmntAmtAndRsn;
         return $this;
@@ -233,7 +233,7 @@ class RemittanceAmount2Type
     /**
      * Gets as adjstmntAmtAndRsn
      *
-     * @return \App\Model\Sepa\PainModel\DocumentAdjustment1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DocumentAdjustment1Type[]
      */
     public function getAdjstmntAmtAndRsn()
     {
@@ -243,7 +243,7 @@ class RemittanceAmount2Type
     /**
      * Sets a new adjstmntAmtAndRsn
      *
-     * @param \App\Model\Sepa\PainModel\DocumentAdjustment1Type[] $adjstmntAmtAndRsn
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DocumentAdjustment1Type[] $adjstmntAmtAndRsn
      * @return self
      */
     public function setAdjstmntAmtAndRsn(array $adjstmntAmtAndRsn)
@@ -255,7 +255,7 @@ class RemittanceAmount2Type
     /**
      * Gets as rmtdAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getRmtdAmt()
     {
@@ -265,10 +265,10 @@ class RemittanceAmount2Type
     /**
      * Sets a new rmtdAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt
      * @return self
      */
-    public function setRmtdAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt)
+    public function setRmtdAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $rmtdAmt)
     {
         $this->rmtdAmt = $rmtdAmt;
         return $this;

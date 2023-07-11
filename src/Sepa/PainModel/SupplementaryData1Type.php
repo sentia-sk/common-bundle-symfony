@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing SupplementaryData1Type
@@ -16,7 +16,7 @@ class SupplementaryData1Type
     private $plcAndNm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp
      */
     private $envlp = null;
 
@@ -45,7 +45,7 @@ class SupplementaryData1Type
     /**
      * Gets as envlp
      *
-     * @return \App\Model\Sepa\PainModel\SupplementaryDataEnvelope1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryDataEnvelope1Type
      */
     public function getEnvlp()
     {
@@ -55,10 +55,10 @@ class SupplementaryData1Type
     /**
      * Sets a new envlp
      *
-     * @param \App\Model\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp
      * @return self
      */
-    public function setEnvlp(\App\Model\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp)
+    public function setEnvlp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryDataEnvelope1Type $envlp)
     {
         $this->envlp = $envlp;
         return $this;

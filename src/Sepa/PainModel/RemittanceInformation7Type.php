@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing RemittanceInformation7Type
@@ -16,7 +16,7 @@ class RemittanceInformation7Type
     private $ustrd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\StructuredRemittanceInformation9Type[] $strd
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRemittanceInformation9Type[] $strd
      */
     private $strd = null;
 
@@ -79,10 +79,10 @@ class RemittanceInformation7Type
     /**
      * Adds as strd
      *
-     * @param \App\Model\Sepa\PainModel\StructuredRemittanceInformation9Type $strd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRemittanceInformation9Type $strd
      *@return self
      */
-    public function addToStrd(\App\Model\Sepa\PainModel\StructuredRemittanceInformation9Type $strd)
+    public function addToStrd(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRemittanceInformation9Type $strd)
     {
         $this->strd[] = $strd;
         return $this;
@@ -113,7 +113,7 @@ class RemittanceInformation7Type
     /**
      * Gets as strd
      *
-     * @return \App\Model\Sepa\PainModel\StructuredRemittanceInformation9Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRemittanceInformation9Type[]
      */
     public function getStrd()
     {
@@ -123,7 +123,7 @@ class RemittanceInformation7Type
     /**
      * Sets a new strd
      *
-     * @param \App\Model\Sepa\PainModel\StructuredRemittanceInformation9Type[] $strd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\StructuredRemittanceInformation9Type[] $strd
      * @return self
      */
     public function setStrd(array $strd)

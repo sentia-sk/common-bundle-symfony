@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing StructuredRemittanceInformation9Type
@@ -11,27 +11,27 @@ class StructuredRemittanceInformation9Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ReferredDocumentInformation3Type[] $rfrdDocInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentInformation3Type[] $rfrdDocInf
      */
     private $rfrdDocInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt
      */
     private $rfrdDocAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf
      */
     private $cdtrRefInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $invcr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcr
      */
     private $invcr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $invcee
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcee
      */
     private $invcee = null;
 
@@ -43,10 +43,10 @@ class StructuredRemittanceInformation9Type
     /**
      * Adds as rfrdDocInf
      *
-     * @param \App\Model\Sepa\PainModel\ReferredDocumentInformation3Type $rfrdDocInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentInformation3Type $rfrdDocInf
      *@return self
      */
-    public function addToRfrdDocInf(\App\Model\Sepa\PainModel\ReferredDocumentInformation3Type $rfrdDocInf)
+    public function addToRfrdDocInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentInformation3Type $rfrdDocInf)
     {
         $this->rfrdDocInf[] = $rfrdDocInf;
         return $this;
@@ -77,7 +77,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Gets as rfrdDocInf
      *
-     * @return \App\Model\Sepa\PainModel\ReferredDocumentInformation3Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentInformation3Type[]
      */
     public function getRfrdDocInf()
     {
@@ -87,7 +87,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Sets a new rfrdDocInf
      *
-     * @param \App\Model\Sepa\PainModel\ReferredDocumentInformation3Type[] $rfrdDocInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentInformation3Type[] $rfrdDocInf
      * @return self
      */
     public function setRfrdDocInf(array $rfrdDocInf)
@@ -99,7 +99,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Gets as rfrdDocAmt
      *
-     * @return \App\Model\Sepa\PainModel\RemittanceAmount2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceAmount2Type
      */
     public function getRfrdDocAmt()
     {
@@ -109,10 +109,10 @@ class StructuredRemittanceInformation9Type
     /**
      * Sets a new rfrdDocAmt
      *
-     * @param \App\Model\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt
      * @return self
      */
-    public function setRfrdDocAmt(\App\Model\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt)
+    public function setRfrdDocAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceAmount2Type $rfrdDocAmt)
     {
         $this->rfrdDocAmt = $rfrdDocAmt;
         return $this;
@@ -121,7 +121,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Gets as cdtrRefInf
      *
-     * @return \App\Model\Sepa\PainModel\CreditorReferenceInformation2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceInformation2Type
      */
     public function getCdtrRefInf()
     {
@@ -131,10 +131,10 @@ class StructuredRemittanceInformation9Type
     /**
      * Sets a new cdtrRefInf
      *
-     * @param \App\Model\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf
      * @return self
      */
-    public function setCdtrRefInf(\App\Model\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf)
+    public function setCdtrRefInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditorReferenceInformation2Type $cdtrRefInf)
     {
         $this->cdtrRefInf = $cdtrRefInf;
         return $this;
@@ -143,7 +143,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Gets as invcr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getInvcr()
     {
@@ -153,10 +153,10 @@ class StructuredRemittanceInformation9Type
     /**
      * Sets a new invcr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $invcr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcr
      * @return self
      */
-    public function setInvcr(\App\Model\Sepa\PainModel\PartyIdentification43Type $invcr)
+    public function setInvcr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcr)
     {
         $this->invcr = $invcr;
         return $this;
@@ -165,7 +165,7 @@ class StructuredRemittanceInformation9Type
     /**
      * Gets as invcee
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getInvcee()
     {
@@ -175,10 +175,10 @@ class StructuredRemittanceInformation9Type
     /**
      * Sets a new invcee
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $invcee
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcee
      * @return self
      */
-    public function setInvcee(\App\Model\Sepa\PainModel\PartyIdentification43Type $invcee)
+    public function setInvcee(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $invcee)
     {
         $this->invcee = $invcee;
         return $this;

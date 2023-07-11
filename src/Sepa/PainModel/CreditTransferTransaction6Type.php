@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing CreditTransferTransaction6Type
@@ -11,22 +11,22 @@ class CreditTransferTransaction6Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\PaymentIdentification1Type $pmtId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentIdentification1Type $pmtId
      */
     private $pmtId = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
      */
     private $pmtTpInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\AmountType3ChoiceType $amt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType $amt
      */
     private $amt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ExchangeRate1Type $xchgRateInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ExchangeRate1Type $xchgRateInf
      */
     private $xchgRateInf = null;
 
@@ -36,75 +36,75 @@ class CreditTransferTransaction6Type
     private $chrgBr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\Cheque7Type $chqInstr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Cheque7Type $chqInstr
      */
     private $chqInstr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
      */
     private $ultmtDbtr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      * $intrmyAgt1
      */
     private $intrmyAgt1 = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct
      */
     private $intrmyAgt1Acct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      * $intrmyAgt2
      */
     private $intrmyAgt2 = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct
      */
     private $intrmyAgt2Acct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      * $intrmyAgt3
      */
     private $intrmyAgt3 = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct
      */
     private $intrmyAgt3Acct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt
      */
     private $cdtrAgt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct
      */
     private $cdtrAgtAcct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $cdtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $cdtr
      */
     private $cdtr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $cdtrAcct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAcct
      */
     private $cdtrAcct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr
      */
     private $ultmtCdtr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\InstructionForCreditorAgent1Type[] $instrForCdtrAgt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\InstructionForCreditorAgent1Type[] $instrForCdtrAgt
      */
     private $instrForCdtrAgt = null;
 
@@ -114,39 +114,39 @@ class CreditTransferTransaction6Type
     private $instrForDbtrAgt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\Purpose2ChoiceType $purp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Purpose2ChoiceType $purp
      */
     private $purp = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\RegulatoryReporting3Type[] $rgltryRptg
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryReporting3Type[] $rgltryRptg
      */
     private $rgltryRptg = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxInformation3Type $tax
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxInformation3Type $tax
      */
     private $tax = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\RemittanceLocation2Type[] $rltdRmtInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceLocation2Type[] $rltdRmtInf
      */
     private $rltdRmtInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\RemittanceInformation7Type $rmtInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceInformation7Type $rmtInf
      */
     private $rmtInf = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
      */
     private $splmtryData = null;
 
     /**
      * Gets as pmtId
      *
-     * @return \App\Model\Sepa\PainModel\PaymentIdentification1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentIdentification1Type
      */
     public function getPmtId()
     {
@@ -156,10 +156,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new pmtId
      *
-     * @param \App\Model\Sepa\PainModel\PaymentIdentification1Type $pmtId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentIdentification1Type $pmtId
      * @return self
      */
-    public function setPmtId(\App\Model\Sepa\PainModel\PaymentIdentification1Type $pmtId)
+    public function setPmtId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentIdentification1Type $pmtId)
     {
         $this->pmtId = $pmtId;
         return $this;
@@ -168,7 +168,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as pmtTpInf
      *
-     * @return \App\Model\Sepa\PainModel\PaymentTypeInformation19Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type
      */
     public function getPmtTpInf()
     {
@@ -178,10 +178,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new pmtTpInf
      *
-     * @param \App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
      * @return self
      */
-    public function setPmtTpInf(\App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf)
+    public function setPmtTpInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf)
     {
         $this->pmtTpInf = $pmtTpInf;
         return $this;
@@ -190,7 +190,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as amt
      *
-     * @return \App\Model\Sepa\PainModel\AmountType3ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType
      */
     public function getAmt()
     {
@@ -200,10 +200,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new amt
      *
-     * @param \App\Model\Sepa\PainModel\AmountType3ChoiceType $amt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType $amt
      * @return self
      */
-    public function setAmt(\App\Model\Sepa\PainModel\AmountType3ChoiceType $amt)
+    public function setAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType $amt)
     {
         $this->amt = $amt;
         return $this;
@@ -212,7 +212,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as xchgRateInf
      *
-     * @return \App\Model\Sepa\PainModel\ExchangeRate1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ExchangeRate1Type
      */
     public function getXchgRateInf()
     {
@@ -222,10 +222,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new xchgRateInf
      *
-     * @param \App\Model\Sepa\PainModel\ExchangeRate1Type $xchgRateInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ExchangeRate1Type $xchgRateInf
      * @return self
      */
-    public function setXchgRateInf(\App\Model\Sepa\PainModel\ExchangeRate1Type $xchgRateInf)
+    public function setXchgRateInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ExchangeRate1Type $xchgRateInf)
     {
         $this->xchgRateInf = $xchgRateInf;
         return $this;
@@ -256,7 +256,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as chqInstr
      *
-     * @return \App\Model\Sepa\PainModel\Cheque7Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Cheque7Type
      */
     public function getChqInstr()
     {
@@ -266,10 +266,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new chqInstr
      *
-     * @param \App\Model\Sepa\PainModel\Cheque7Type $chqInstr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Cheque7Type $chqInstr
      * @return self
      */
-    public function setChqInstr(\App\Model\Sepa\PainModel\Cheque7Type $chqInstr)
+    public function setChqInstr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\Cheque7Type $chqInstr)
     {
         $this->chqInstr = $chqInstr;
         return $this;
@@ -278,7 +278,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as ultmtDbtr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getUltmtDbtr()
     {
@@ -288,10 +288,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new ultmtDbtr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
      * @return self
      */
-    public function setUltmtDbtr(\App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr)
+    public function setUltmtDbtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr)
     {
         $this->ultmtDbtr = $ultmtDbtr;
         return $this;
@@ -300,7 +300,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt1
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getIntrmyAgt1()
     {
@@ -310,10 +310,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt1
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt1
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt1
      * @return self
      */
-    public function setIntrmyAgt1(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt1)
+    public function setIntrmyAgt1(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt1)
     {
         $this->intrmyAgt1 = $intrmyAgt1;
         return $this;
@@ -322,7 +322,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt1Acct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getIntrmyAgt1Acct()
     {
@@ -332,10 +332,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt1Acct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct
      * @return self
      */
-    public function setIntrmyAgt1Acct(\App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct)
+    public function setIntrmyAgt1Acct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt1Acct)
     {
         $this->intrmyAgt1Acct = $intrmyAgt1Acct;
         return $this;
@@ -344,7 +344,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt2
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getIntrmyAgt2()
     {
@@ -354,10 +354,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt2
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt2
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt2
      * @return self
      */
-    public function setIntrmyAgt2(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt2)
+    public function setIntrmyAgt2(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt2)
     {
         $this->intrmyAgt2 = $intrmyAgt2;
         return $this;
@@ -366,7 +366,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt2Acct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getIntrmyAgt2Acct()
     {
@@ -376,10 +376,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt2Acct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct
      * @return self
      */
-    public function setIntrmyAgt2Acct(\App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct)
+    public function setIntrmyAgt2Acct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt2Acct)
     {
         $this->intrmyAgt2Acct = $intrmyAgt2Acct;
         return $this;
@@ -388,7 +388,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt3
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getIntrmyAgt3()
     {
@@ -398,10 +398,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt3
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt3
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt3
      * @return self
      */
-    public function setIntrmyAgt3(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt3)
+    public function setIntrmyAgt3(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $intrmyAgt3)
     {
         $this->intrmyAgt3 = $intrmyAgt3;
         return $this;
@@ -410,7 +410,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as intrmyAgt3Acct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getIntrmyAgt3Acct()
     {
@@ -420,10 +420,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new intrmyAgt3Acct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct
      * @return self
      */
-    public function setIntrmyAgt3Acct(\App\Model\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct)
+    public function setIntrmyAgt3Acct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $intrmyAgt3Acct)
     {
         $this->intrmyAgt3Acct = $intrmyAgt3Acct;
         return $this;
@@ -432,7 +432,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as cdtrAgt
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getCdtrAgt()
     {
@@ -442,10 +442,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new cdtrAgt
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt
      * @return self
      */
-    public function setCdtrAgt(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt)
+    public function setCdtrAgt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $cdtrAgt)
     {
         $this->cdtrAgt = $cdtrAgt;
         return $this;
@@ -454,7 +454,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as cdtrAgtAcct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getCdtrAgtAcct()
     {
@@ -464,10 +464,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new cdtrAgtAcct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct
      * @return self
      */
-    public function setCdtrAgtAcct(\App\Model\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct)
+    public function setCdtrAgtAcct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAgtAcct)
     {
         $this->cdtrAgtAcct = $cdtrAgtAcct;
         return $this;
@@ -476,7 +476,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as cdtr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getCdtr()
     {
@@ -486,10 +486,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new cdtr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $cdtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $cdtr
      * @return self
      */
-    public function setCdtr(\App\Model\Sepa\PainModel\PartyIdentification43Type $cdtr)
+    public function setCdtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $cdtr)
     {
         $this->cdtr = $cdtr;
         return $this;
@@ -498,7 +498,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as cdtrAcct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getCdtrAcct()
     {
@@ -508,10 +508,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new cdtrAcct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $cdtrAcct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAcct
      * @return self
      */
-    public function setCdtrAcct(\App\Model\Sepa\PainModel\CashAccount24Type $cdtrAcct)
+    public function setCdtrAcct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $cdtrAcct)
     {
         $this->cdtrAcct = $cdtrAcct;
         return $this;
@@ -520,7 +520,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as ultmtCdtr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getUltmtCdtr()
     {
@@ -530,10 +530,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new ultmtCdtr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr
      * @return self
      */
-    public function setUltmtCdtr(\App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr)
+    public function setUltmtCdtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtCdtr)
     {
         $this->ultmtCdtr = $ultmtCdtr;
         return $this;
@@ -542,10 +542,10 @@ class CreditTransferTransaction6Type
     /**
      * Adds as instrForCdtrAgt
      *
-     * @param \App\Model\Sepa\PainModel\InstructionForCreditorAgent1Type $instrForCdtrAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\InstructionForCreditorAgent1Type $instrForCdtrAgt
      *@return self
      */
-    public function addToInstrForCdtrAgt(\App\Model\Sepa\PainModel\InstructionForCreditorAgent1Type $instrForCdtrAgt)
+    public function addToInstrForCdtrAgt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\InstructionForCreditorAgent1Type $instrForCdtrAgt)
     {
         $this->instrForCdtrAgt[] = $instrForCdtrAgt;
         return $this;
@@ -576,7 +576,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as instrForCdtrAgt
      *
-     * @return \App\Model\Sepa\PainModel\InstructionForCreditorAgent1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\InstructionForCreditorAgent1Type[]
      */
     public function getInstrForCdtrAgt()
     {
@@ -586,7 +586,7 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new instrForCdtrAgt
      *
-     * @param \App\Model\Sepa\PainModel\InstructionForCreditorAgent1Type[] $instrForCdtrAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\InstructionForCreditorAgent1Type[] $instrForCdtrAgt
      * @return self
      */
     public function setInstrForCdtrAgt(array $instrForCdtrAgt)
@@ -620,7 +620,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as purp
      *
-     * @return \App\Model\Sepa\PainModel\Purpose2ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Purpose2ChoiceType
      */
     public function getPurp()
     {
@@ -630,10 +630,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new purp
      *
-     * @param \App\Model\Sepa\PainModel\Purpose2ChoiceType $purp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\Purpose2ChoiceType $purp
      * @return self
      */
-    public function setPurp(\App\Model\Sepa\PainModel\Purpose2ChoiceType $purp)
+    public function setPurp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\Purpose2ChoiceType $purp)
     {
         $this->purp = $purp;
         return $this;
@@ -642,10 +642,10 @@ class CreditTransferTransaction6Type
     /**
      * Adds as rgltryRptg
      *
-     * @param \App\Model\Sepa\PainModel\RegulatoryReporting3Type $rgltryRptg
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryReporting3Type $rgltryRptg
      *@return self
      */
-    public function addToRgltryRptg(\App\Model\Sepa\PainModel\RegulatoryReporting3Type $rgltryRptg)
+    public function addToRgltryRptg(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryReporting3Type $rgltryRptg)
     {
         $this->rgltryRptg[] = $rgltryRptg;
         return $this;
@@ -676,7 +676,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as rgltryRptg
      *
-     * @return \App\Model\Sepa\PainModel\RegulatoryReporting3Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryReporting3Type[]
      */
     public function getRgltryRptg()
     {
@@ -686,7 +686,7 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new rgltryRptg
      *
-     * @param \App\Model\Sepa\PainModel\RegulatoryReporting3Type[] $rgltryRptg
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RegulatoryReporting3Type[] $rgltryRptg
      * @return self
      */
     public function setRgltryRptg(array $rgltryRptg)
@@ -698,7 +698,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as tax
      *
-     * @return \App\Model\Sepa\PainModel\TaxInformation3Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxInformation3Type
      */
     public function getTax()
     {
@@ -708,10 +708,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new tax
      *
-     * @param \App\Model\Sepa\PainModel\TaxInformation3Type $tax
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxInformation3Type $tax
      * @return self
      */
-    public function setTax(\App\Model\Sepa\PainModel\TaxInformation3Type $tax)
+    public function setTax(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxInformation3Type $tax)
     {
         $this->tax = $tax;
         return $this;
@@ -720,10 +720,10 @@ class CreditTransferTransaction6Type
     /**
      * Adds as rltdRmtInf
      *
-     * @param \App\Model\Sepa\PainModel\RemittanceLocation2Type $rltdRmtInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceLocation2Type $rltdRmtInf
      *@return self
      */
-    public function addToRltdRmtInf(\App\Model\Sepa\PainModel\RemittanceLocation2Type $rltdRmtInf)
+    public function addToRltdRmtInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceLocation2Type $rltdRmtInf)
     {
         $this->rltdRmtInf[] = $rltdRmtInf;
         return $this;
@@ -754,7 +754,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as rltdRmtInf
      *
-     * @return \App\Model\Sepa\PainModel\RemittanceLocation2Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceLocation2Type[]
      */
     public function getRltdRmtInf()
     {
@@ -764,7 +764,7 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new rltdRmtInf
      *
-     * @param \App\Model\Sepa\PainModel\RemittanceLocation2Type[] $rltdRmtInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceLocation2Type[] $rltdRmtInf
      * @return self
      */
     public function setRltdRmtInf(array $rltdRmtInf)
@@ -776,7 +776,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as rmtInf
      *
-     * @return \App\Model\Sepa\PainModel\RemittanceInformation7Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceInformation7Type
      */
     public function getRmtInf()
     {
@@ -786,10 +786,10 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new rmtInf
      *
-     * @param \App\Model\Sepa\PainModel\RemittanceInformation7Type $rmtInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceInformation7Type $rmtInf
      * @return self
      */
-    public function setRmtInf(\App\Model\Sepa\PainModel\RemittanceInformation7Type $rmtInf)
+    public function setRmtInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\RemittanceInformation7Type $rmtInf)
     {
         $this->rmtInf = $rmtInf;
         return $this;
@@ -798,10 +798,10 @@ class CreditTransferTransaction6Type
     /**
      * Adds as splmtryData
      *
-     * @param \App\Model\Sepa\PainModel\SupplementaryData1Type $splmtryData
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type $splmtryData
      *@return self
      */
-    public function addToSplmtryData(\App\Model\Sepa\PainModel\SupplementaryData1Type $splmtryData)
+    public function addToSplmtryData(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type $splmtryData)
     {
         $this->splmtryData[] = $splmtryData;
         return $this;
@@ -832,7 +832,7 @@ class CreditTransferTransaction6Type
     /**
      * Gets as splmtryData
      *
-     * @return \App\Model\Sepa\PainModel\SupplementaryData1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[]
      */
     public function getSplmtryData()
     {
@@ -842,7 +842,7 @@ class CreditTransferTransaction6Type
     /**
      * Sets a new splmtryData
      *
-     * @param \App\Model\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\SupplementaryData1Type[] $splmtryData
      * @return self
      */
     public function setSplmtryData(array $splmtryData)

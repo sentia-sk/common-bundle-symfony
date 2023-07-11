@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing GenericPersonIdentification1Type
@@ -16,7 +16,7 @@ class GenericPersonIdentification1Type
     private $id = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm
      */
     private $schmeNm = null;
 
@@ -50,7 +50,7 @@ class GenericPersonIdentification1Type
     /**
      * Gets as schmeNm
      *
-     * @return \App\Model\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType
      */
     public function getSchmeNm()
     {
@@ -60,10 +60,10 @@ class GenericPersonIdentification1Type
     /**
      * Sets a new schmeNm
      *
-     * @param \App\Model\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm
      * @return self
      */
-    public function setSchmeNm(\App\Model\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm)
+    public function setSchmeNm(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PersonIdentificationSchemeName1ChoiceType $schmeNm)
     {
         $this->schmeNm = $schmeNm;
         return $this;

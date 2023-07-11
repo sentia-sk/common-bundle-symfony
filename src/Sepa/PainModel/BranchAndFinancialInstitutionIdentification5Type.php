@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing BranchAndFinancialInstitutionIdentification5Type
@@ -11,19 +11,19 @@ class BranchAndFinancialInstitutionIdentification5Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId
      */
     private $finInstnId = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchData2Type $brnchId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchData2Type $brnchId
      */
     private $brnchId = null;
 
     /**
      * Gets as finInstnId
      *
-     * @return \App\Model\Sepa\PainModel\FinancialInstitutionIdentification8Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\FinancialInstitutionIdentification8Type
      */
     public function getFinInstnId()
     {
@@ -33,10 +33,10 @@ class BranchAndFinancialInstitutionIdentification5Type
     /**
      * Sets a new finInstnId
      *
-     * @param \App\Model\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId
      * @return self
      */
-    public function setFinInstnId(\App\Model\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId)
+    public function setFinInstnId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\FinancialInstitutionIdentification8Type $finInstnId)
     {
         $this->finInstnId = $finInstnId;
         return $this;
@@ -45,7 +45,7 @@ class BranchAndFinancialInstitutionIdentification5Type
     /**
      * Gets as brnchId
      *
-     * @return \App\Model\Sepa\PainModel\BranchData2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchData2Type
      */
     public function getBrnchId()
     {
@@ -55,10 +55,10 @@ class BranchAndFinancialInstitutionIdentification5Type
     /**
      * Sets a new brnchId
      *
-     * @param \App\Model\Sepa\PainModel\BranchData2Type $brnchId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchData2Type $brnchId
      * @return self
      */
-    public function setBrnchId(\App\Model\Sepa\PainModel\BranchData2Type $brnchId)
+    public function setBrnchId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchData2Type $brnchId)
     {
         $this->brnchId = $brnchId;
         return $this;

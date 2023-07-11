@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\Sepa;
 
-use App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType;
-use App\Model\Sepa\PainModel\Document;
 use DateTime;
 use DOMDocument;
 use DOMElement;
 use DOMException;
 use ReflectionClass;
 use ReflectionException;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType;
+use SentiaSk\CommonBundleSymfony\Sepa\PainModel\Document;
 
 class ObjectToXML
 {

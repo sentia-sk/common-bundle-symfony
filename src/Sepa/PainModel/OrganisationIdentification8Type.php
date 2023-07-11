@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing OrganisationIdentification8Type
@@ -16,7 +16,7 @@ class OrganisationIdentification8Type
     private $anyBIC = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\GenericOrganisationIdentification1Type[] $othr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericOrganisationIdentification1Type[] $othr
      */
     private $othr = null;
 
@@ -45,10 +45,10 @@ class OrganisationIdentification8Type
     /**
      * Adds as othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericOrganisationIdentification1Type $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericOrganisationIdentification1Type $othr
      *@return self
      */
-    public function addToOthr(\App\Model\Sepa\PainModel\GenericOrganisationIdentification1Type $othr)
+    public function addToOthr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericOrganisationIdentification1Type $othr)
     {
         $this->othr[] = $othr;
         return $this;
@@ -79,7 +79,7 @@ class OrganisationIdentification8Type
     /**
      * Gets as othr
      *
-     * @return \App\Model\Sepa\PainModel\GenericOrganisationIdentification1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericOrganisationIdentification1Type[]
      */
     public function getOthr()
     {
@@ -89,7 +89,7 @@ class OrganisationIdentification8Type
     /**
      * Sets a new othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericOrganisationIdentification1Type[] $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericOrganisationIdentification1Type[] $othr
      * @return self
      */
     public function setOthr(array $othr)

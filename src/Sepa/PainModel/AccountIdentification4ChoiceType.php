@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing AccountIdentification4ChoiceType
@@ -16,7 +16,7 @@ class AccountIdentification4ChoiceType
     private $iBAN = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\GenericAccountIdentification1Type $othr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericAccountIdentification1Type $othr
      */
     private $othr = null;
 
@@ -45,7 +45,7 @@ class AccountIdentification4ChoiceType
     /**
      * Gets as othr
      *
-     * @return \App\Model\Sepa\PainModel\GenericAccountIdentification1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericAccountIdentification1Type
      */
     public function getOthr()
     {
@@ -55,10 +55,10 @@ class AccountIdentification4ChoiceType
     /**
      * Sets a new othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericAccountIdentification1Type $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericAccountIdentification1Type $othr
      * @return self
      */
-    public function setOthr(\App\Model\Sepa\PainModel\GenericAccountIdentification1Type $othr)
+    public function setOthr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericAccountIdentification1Type $othr)
     {
         $this->othr = $othr;
         return $this;

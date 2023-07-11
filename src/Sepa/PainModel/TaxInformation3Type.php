@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxInformation3Type
@@ -11,12 +11,12 @@ class TaxInformation3Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxParty1Type $cdtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty1Type $cdtr
      */
     private $cdtr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxParty2Type $dbtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty2Type $dbtr
      */
     private $dbtr = null;
 
@@ -36,12 +36,12 @@ class TaxInformation3Type
     private $mtd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt
      */
     private $ttlTaxblBaseAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt
      */
     private $ttlTaxAmt = null;
 
@@ -56,14 +56,14 @@ class TaxInformation3Type
     private $seqNb = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxRecord1Type[] $rcrd
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecord1Type[] $rcrd
      */
     private $rcrd = null;
 
     /**
      * Gets as cdtr
      *
-     * @return \App\Model\Sepa\PainModel\TaxParty1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty1Type
      */
     public function getCdtr()
     {
@@ -73,10 +73,10 @@ class TaxInformation3Type
     /**
      * Sets a new cdtr
      *
-     * @param \App\Model\Sepa\PainModel\TaxParty1Type $cdtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty1Type $cdtr
      * @return self
      */
-    public function setCdtr(\App\Model\Sepa\PainModel\TaxParty1Type $cdtr)
+    public function setCdtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty1Type $cdtr)
     {
         $this->cdtr = $cdtr;
         return $this;
@@ -85,7 +85,7 @@ class TaxInformation3Type
     /**
      * Gets as dbtr
      *
-     * @return \App\Model\Sepa\PainModel\TaxParty2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty2Type
      */
     public function getDbtr()
     {
@@ -95,10 +95,10 @@ class TaxInformation3Type
     /**
      * Sets a new dbtr
      *
-     * @param \App\Model\Sepa\PainModel\TaxParty2Type $dbtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty2Type $dbtr
      * @return self
      */
-    public function setDbtr(\App\Model\Sepa\PainModel\TaxParty2Type $dbtr)
+    public function setDbtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxParty2Type $dbtr)
     {
         $this->dbtr = $dbtr;
         return $this;
@@ -173,7 +173,7 @@ class TaxInformation3Type
     /**
      * Gets as ttlTaxblBaseAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getTtlTaxblBaseAmt()
     {
@@ -183,10 +183,10 @@ class TaxInformation3Type
     /**
      * Sets a new ttlTaxblBaseAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt
      * @return self
      */
-    public function setTtlTaxblBaseAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt)
+    public function setTtlTaxblBaseAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxblBaseAmt)
     {
         $this->ttlTaxblBaseAmt = $ttlTaxblBaseAmt;
         return $this;
@@ -195,7 +195,7 @@ class TaxInformation3Type
     /**
      * Gets as ttlTaxAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getTtlTaxAmt()
     {
@@ -205,10 +205,10 @@ class TaxInformation3Type
     /**
      * Sets a new ttlTaxAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt
      * @return self
      */
-    public function setTtlTaxAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt)
+    public function setTtlTaxAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlTaxAmt)
     {
         $this->ttlTaxAmt = $ttlTaxAmt;
         return $this;
@@ -261,10 +261,10 @@ class TaxInformation3Type
     /**
      * Adds as rcrd
      *
-     * @param \App\Model\Sepa\PainModel\TaxRecord1Type $rcrd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecord1Type $rcrd
      *@return self
      */
-    public function addToRcrd(\App\Model\Sepa\PainModel\TaxRecord1Type $rcrd)
+    public function addToRcrd(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecord1Type $rcrd)
     {
         $this->rcrd[] = $rcrd;
         return $this;
@@ -295,7 +295,7 @@ class TaxInformation3Type
     /**
      * Gets as rcrd
      *
-     * @return \App\Model\Sepa\PainModel\TaxRecord1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecord1Type[]
      */
     public function getRcrd()
     {
@@ -305,7 +305,7 @@ class TaxInformation3Type
     /**
      * Sets a new rcrd
      *
-     * @param \App\Model\Sepa\PainModel\TaxRecord1Type[] $rcrd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecord1Type[] $rcrd
      * @return self
      */
     public function setRcrd(array $rcrd)

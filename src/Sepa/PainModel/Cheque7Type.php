@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing Cheque7Type
@@ -21,17 +21,17 @@ class Cheque7Type
     private $chqNb = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\NameAndAddress10Type $chqFr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $chqFr
      */
     private $chqFr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd
      */
     private $dlvryMtd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\NameAndAddress10Type $dlvrTo
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $dlvrTo
      */
     private $dlvrTo = null;
 
@@ -117,7 +117,7 @@ class Cheque7Type
     /**
      * Gets as chqFr
      *
-     * @return \App\Model\Sepa\PainModel\NameAndAddress10Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type
      */
     public function getChqFr()
     {
@@ -127,10 +127,10 @@ class Cheque7Type
     /**
      * Sets a new chqFr
      *
-     * @param \App\Model\Sepa\PainModel\NameAndAddress10Type $chqFr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $chqFr
      * @return self
      */
-    public function setChqFr(\App\Model\Sepa\PainModel\NameAndAddress10Type $chqFr)
+    public function setChqFr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $chqFr)
     {
         $this->chqFr = $chqFr;
         return $this;
@@ -139,7 +139,7 @@ class Cheque7Type
     /**
      * Gets as dlvryMtd
      *
-     * @return \App\Model\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType
      */
     public function getDlvryMtd()
     {
@@ -149,10 +149,10 @@ class Cheque7Type
     /**
      * Sets a new dlvryMtd
      *
-     * @param \App\Model\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd
      * @return self
      */
-    public function setDlvryMtd(\App\Model\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd)
+    public function setDlvryMtd(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ChequeDeliveryMethod1ChoiceType $dlvryMtd)
     {
         $this->dlvryMtd = $dlvryMtd;
         return $this;
@@ -161,7 +161,7 @@ class Cheque7Type
     /**
      * Gets as dlvrTo
      *
-     * @return \App\Model\Sepa\PainModel\NameAndAddress10Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type
      */
     public function getDlvrTo()
     {
@@ -171,10 +171,10 @@ class Cheque7Type
     /**
      * Sets a new dlvrTo
      *
-     * @param \App\Model\Sepa\PainModel\NameAndAddress10Type $dlvrTo
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $dlvrTo
      * @return self
      */
-    public function setDlvrTo(\App\Model\Sepa\PainModel\NameAndAddress10Type $dlvrTo)
+    public function setDlvrTo(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $dlvrTo)
     {
         $this->dlvrTo = $dlvrTo;
         return $this;

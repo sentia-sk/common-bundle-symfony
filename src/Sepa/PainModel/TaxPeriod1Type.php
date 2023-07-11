@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxPeriod1Type
@@ -21,7 +21,7 @@ class TaxPeriod1Type
     private $tp = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\DatePeriodDetailsType $frToDt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DatePeriodDetailsType $frToDt
      */
     private $frToDt = null;
 
@@ -72,7 +72,7 @@ class TaxPeriod1Type
     /**
      * Gets as frToDt
      *
-     * @return \App\Model\Sepa\PainModel\DatePeriodDetailsType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DatePeriodDetailsType
      */
     public function getFrToDt()
     {
@@ -82,10 +82,10 @@ class TaxPeriod1Type
     /**
      * Sets a new frToDt
      *
-     * @param \App\Model\Sepa\PainModel\DatePeriodDetailsType $frToDt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DatePeriodDetailsType $frToDt
      * @return self
      */
-    public function setFrToDt(\App\Model\Sepa\PainModel\DatePeriodDetailsType $frToDt)
+    public function setFrToDt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\DatePeriodDetailsType $frToDt)
     {
         $this->frToDt = $frToDt;
         return $this;

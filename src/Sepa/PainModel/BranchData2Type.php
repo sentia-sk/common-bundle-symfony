@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing BranchData2Type
@@ -21,7 +21,7 @@ class BranchData2Type
     private $nm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      */
     private $pstlAdr = null;
 
@@ -72,7 +72,7 @@ class BranchData2Type
     /**
      * Gets as pstlAdr
      *
-     * @return \App\Model\Sepa\PainModel\PostalAddress6Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type
      */
     public function getPstlAdr()
     {
@@ -82,10 +82,10 @@ class BranchData2Type
     /**
      * Sets a new pstlAdr
      *
-     * @param \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      * @return self
      */
-    public function setPstlAdr(\App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr)
+    public function setPstlAdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr)
     {
         $this->pstlAdr = $pstlAdr;
         return $this;

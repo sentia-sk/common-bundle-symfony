@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing NameAndAddress10Type
@@ -16,7 +16,7 @@ class NameAndAddress10Type
     private $nm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PostalAddress6Type $adr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $adr
      */
     private $adr = null;
 
@@ -45,7 +45,7 @@ class NameAndAddress10Type
     /**
      * Gets as adr
      *
-     * @return \App\Model\Sepa\PainModel\PostalAddress6Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type
      */
     public function getAdr()
     {
@@ -55,10 +55,10 @@ class NameAndAddress10Type
     /**
      * Sets a new adr
      *
-     * @param \App\Model\Sepa\PainModel\PostalAddress6Type $adr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $adr
      * @return self
      */
-    public function setAdr(\App\Model\Sepa\PainModel\PostalAddress6Type $adr)
+    public function setAdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $adr)
     {
         $this->adr = $adr;
         return $this;

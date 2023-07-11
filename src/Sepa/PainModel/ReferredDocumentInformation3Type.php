@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing ReferredDocumentInformation3Type
@@ -11,7 +11,7 @@ class ReferredDocumentInformation3Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\ReferredDocumentType2Type $tp
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType2Type $tp
      */
     private $tp = null;
 
@@ -28,7 +28,7 @@ class ReferredDocumentInformation3Type
     /**
      * Gets as tp
      *
-     * @return \App\Model\Sepa\PainModel\ReferredDocumentType2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType2Type
      */
     public function getTp()
     {
@@ -38,10 +38,10 @@ class ReferredDocumentInformation3Type
     /**
      * Sets a new tp
      *
-     * @param \App\Model\Sepa\PainModel\ReferredDocumentType2Type $tp
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType2Type $tp
      * @return self
      */
-    public function setTp(\App\Model\Sepa\PainModel\ReferredDocumentType2Type $tp)
+    public function setTp(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ReferredDocumentType2Type $tp)
     {
         $this->tp = $tp;
         return $this;

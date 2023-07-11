@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing PaymentInstruction9Type
@@ -36,7 +36,7 @@ class PaymentInstruction9Type
     private $ctrlSum = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
      */
     private $pmtTpInf = null;
 
@@ -51,22 +51,22 @@ class PaymentInstruction9Type
     private $poolgAdjstmntDt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $dbtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $dbtr
      */
     private $dbtr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $dbtrAcct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAcct
      */
     private $dbtrAcct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt
      */
     private $dbtrAgt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct
      */
     private $dbtrAgtAcct = null;
 
@@ -76,7 +76,7 @@ class PaymentInstruction9Type
     private $instrForDbtrAgt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
      */
     private $ultmtDbtr = null;
 
@@ -86,18 +86,18 @@ class PaymentInstruction9Type
     private $chrgBr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CashAccount24Type $chrgsAcct
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $chrgsAcct
      */
     private $chrgsAcct = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      * $chrgsAcctAgt
      */
     private $chrgsAcctAgt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\CreditTransferTransaction6Type[] $cdtTrfTxInf
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type[] $cdtTrfTxInf
      */
     private $cdtTrfTxInf = array();
 
@@ -214,7 +214,7 @@ class PaymentInstruction9Type
     /**
      * Gets as pmtTpInf
      *
-     * @return \App\Model\Sepa\PainModel\PaymentTypeInformation19Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type
      */
     public function getPmtTpInf()
     {
@@ -224,10 +224,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new pmtTpInf
      *
-     * @param \App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf
      * @return self
      */
-    public function setPmtTpInf(\App\Model\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf)
+    public function setPmtTpInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PaymentTypeInformation19Type $pmtTpInf)
     {
         $this->pmtTpInf = $pmtTpInf;
         return $this;
@@ -280,7 +280,7 @@ class PaymentInstruction9Type
     /**
      * Gets as dbtr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getDbtr()
     {
@@ -290,10 +290,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new dbtr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $dbtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $dbtr
      * @return self
      */
-    public function setDbtr(\App\Model\Sepa\PainModel\PartyIdentification43Type $dbtr)
+    public function setDbtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $dbtr)
     {
         $this->dbtr = $dbtr;
         return $this;
@@ -302,7 +302,7 @@ class PaymentInstruction9Type
     /**
      * Gets as dbtrAcct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getDbtrAcct()
     {
@@ -312,10 +312,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new dbtrAcct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $dbtrAcct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAcct
      * @return self
      */
-    public function setDbtrAcct(\App\Model\Sepa\PainModel\CashAccount24Type $dbtrAcct)
+    public function setDbtrAcct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAcct)
     {
         $this->dbtrAcct = $dbtrAcct;
         return $this;
@@ -324,7 +324,7 @@ class PaymentInstruction9Type
     /**
      * Gets as dbtrAgt
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getDbtrAgt()
     {
@@ -334,10 +334,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new dbtrAgt
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt
      * @return self
      */
-    public function setDbtrAgt(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt)
+    public function setDbtrAgt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $dbtrAgt)
     {
         $this->dbtrAgt = $dbtrAgt;
         return $this;
@@ -346,7 +346,7 @@ class PaymentInstruction9Type
     /**
      * Gets as dbtrAgtAcct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getDbtrAgtAcct()
     {
@@ -356,10 +356,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new dbtrAgtAcct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct
      * @return self
      */
-    public function setDbtrAgtAcct(\App\Model\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct)
+    public function setDbtrAgtAcct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $dbtrAgtAcct)
     {
         $this->dbtrAgtAcct = $dbtrAgtAcct;
         return $this;
@@ -390,7 +390,7 @@ class PaymentInstruction9Type
     /**
      * Gets as ultmtDbtr
      *
-     * @return \App\Model\Sepa\PainModel\PartyIdentification43Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type
      */
     public function getUltmtDbtr()
     {
@@ -400,10 +400,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new ultmtDbtr
      *
-     * @param \App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr
      * @return self
      */
-    public function setUltmtDbtr(\App\Model\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr)
+    public function setUltmtDbtr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PartyIdentification43Type $ultmtDbtr)
     {
         $this->ultmtDbtr = $ultmtDbtr;
         return $this;
@@ -434,7 +434,7 @@ class PaymentInstruction9Type
     /**
      * Gets as chrgsAcct
      *
-     * @return \App\Model\Sepa\PainModel\CashAccount24Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type
      */
     public function getChrgsAcct()
     {
@@ -444,10 +444,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new chrgsAcct
      *
-     * @param \App\Model\Sepa\PainModel\CashAccount24Type $chrgsAcct
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $chrgsAcct
      * @return self
      */
-    public function setChrgsAcct(\App\Model\Sepa\PainModel\CashAccount24Type $chrgsAcct)
+    public function setChrgsAcct(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CashAccount24Type $chrgsAcct)
     {
         $this->chrgsAcct = $chrgsAcct;
         return $this;
@@ -456,7 +456,7 @@ class PaymentInstruction9Type
     /**
      * Gets as chrgsAcctAgt
      *
-     * @return \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type
      */
     public function getChrgsAcctAgt()
     {
@@ -466,10 +466,10 @@ class PaymentInstruction9Type
     /**
      * Sets a new chrgsAcctAgt
      *
-     * @param \App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $chrgsAcctAgt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $chrgsAcctAgt
      * @return self
      */
-    public function setChrgsAcctAgt(\App\Model\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $chrgsAcctAgt)
+    public function setChrgsAcctAgt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\BranchAndFinancialInstitutionIdentification5Type $chrgsAcctAgt)
     {
         $this->chrgsAcctAgt = $chrgsAcctAgt;
         return $this;
@@ -478,10 +478,10 @@ class PaymentInstruction9Type
     /**
      * Adds as cdtTrfTxInf
      *
-     * @param \App\Model\Sepa\PainModel\CreditTransferTransaction6Type $cdtTrfTxInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type $cdtTrfTxInf
      *@return self
      */
-    public function addToCdtTrfTxInf(\App\Model\Sepa\PainModel\CreditTransferTransaction6Type $cdtTrfTxInf)
+    public function addToCdtTrfTxInf(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type $cdtTrfTxInf)
     {
         $this->cdtTrfTxInf[] = $cdtTrfTxInf;
         return $this;
@@ -512,7 +512,7 @@ class PaymentInstruction9Type
     /**
      * Gets as cdtTrfTxInf
      *
-     * @return \App\Model\Sepa\PainModel\CreditTransferTransaction6Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type[]
      */
     public function getCdtTrfTxInf()
     {
@@ -522,7 +522,7 @@ class PaymentInstruction9Type
     /**
      * Sets a new cdtTrfTxInf
      *
-     * @param \App\Model\Sepa\PainModel\CreditTransferTransaction6Type[] $cdtTrfTxInf
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\CreditTransferTransaction6Type[] $cdtTrfTxInf
      * @return self
      */
     public function setCdtTrfTxInf(array $cdtTrfTxInf)

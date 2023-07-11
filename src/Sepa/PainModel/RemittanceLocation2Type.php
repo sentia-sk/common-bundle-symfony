@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing RemittanceLocation2Type
@@ -26,7 +26,7 @@ class RemittanceLocation2Type
     private $rmtLctnElctrncAdr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr
      */
     private $rmtLctnPstlAdr = null;
 
@@ -99,7 +99,7 @@ class RemittanceLocation2Type
     /**
      * Gets as rmtLctnPstlAdr
      *
-     * @return \App\Model\Sepa\PainModel\NameAndAddress10Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type
      */
     public function getRmtLctnPstlAdr()
     {
@@ -109,10 +109,10 @@ class RemittanceLocation2Type
     /**
      * Sets a new rmtLctnPstlAdr
      *
-     * @param \App\Model\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr
      * @return self
      */
-    public function setRmtLctnPstlAdr(\App\Model\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr)
+    public function setRmtLctnPstlAdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\NameAndAddress10Type $rmtLctnPstlAdr)
     {
         $this->rmtLctnPstlAdr = $rmtLctnPstlAdr;
         return $this;

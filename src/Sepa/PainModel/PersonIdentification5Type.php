@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing PersonIdentification5Type
@@ -11,19 +11,19 @@ class PersonIdentification5Type
 {
 
     /**
-     * @property \App\Model\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth
      */
     private $dtAndPlcOfBirth = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\GenericPersonIdentification1Type[] $othr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericPersonIdentification1Type[] $othr
      */
     private $othr = null;
 
     /**
      * Gets as dtAndPlcOfBirth
      *
-     * @return \App\Model\Sepa\PainModel\DateAndPlaceOfBirthType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DateAndPlaceOfBirthType
      */
     public function getDtAndPlcOfBirth()
     {
@@ -33,10 +33,10 @@ class PersonIdentification5Type
     /**
      * Sets a new dtAndPlcOfBirth
      *
-     * @param \App\Model\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth
      * @return self
      */
-    public function setDtAndPlcOfBirth(\App\Model\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth)
+    public function setDtAndPlcOfBirth(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\DateAndPlaceOfBirthType $dtAndPlcOfBirth)
     {
         $this->dtAndPlcOfBirth = $dtAndPlcOfBirth;
         return $this;
@@ -45,10 +45,10 @@ class PersonIdentification5Type
     /**
      * Adds as othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericPersonIdentification1Type $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericPersonIdentification1Type $othr
      *@return self
      */
-    public function addToOthr(\App\Model\Sepa\PainModel\GenericPersonIdentification1Type $othr)
+    public function addToOthr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericPersonIdentification1Type $othr)
     {
         $this->othr[] = $othr;
         return $this;
@@ -79,7 +79,7 @@ class PersonIdentification5Type
     /**
      * Gets as othr
      *
-     * @return \App\Model\Sepa\PainModel\GenericPersonIdentification1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericPersonIdentification1Type[]
      */
     public function getOthr()
     {
@@ -89,7 +89,7 @@ class PersonIdentification5Type
     /**
      * Sets a new othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericPersonIdentification1Type[] $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericPersonIdentification1Type[] $othr
      * @return self
      */
     public function setOthr(array $othr)

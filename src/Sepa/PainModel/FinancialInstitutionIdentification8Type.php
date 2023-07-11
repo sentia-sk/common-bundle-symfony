@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing FinancialInstitutionIdentification8Type
@@ -16,7 +16,7 @@ class FinancialInstitutionIdentification8Type
     private $bICFI = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId
      */
     private $clrSysMmbId = null;
 
@@ -26,12 +26,12 @@ class FinancialInstitutionIdentification8Type
     private $nm = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      */
     private $pstlAdr = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\GenericFinancialIdentification1Type $othr
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericFinancialIdentification1Type $othr
      */
     private $othr = null;
 
@@ -60,7 +60,7 @@ class FinancialInstitutionIdentification8Type
     /**
      * Gets as clrSysMmbId
      *
-     * @return \App\Model\Sepa\PainModel\ClearingSystemMemberIdentification2Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemMemberIdentification2Type
      */
     public function getClrSysMmbId()
     {
@@ -70,10 +70,10 @@ class FinancialInstitutionIdentification8Type
     /**
      * Sets a new clrSysMmbId
      *
-     * @param \App\Model\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId
      * @return self
      */
-    public function setClrSysMmbId(\App\Model\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId)
+    public function setClrSysMmbId(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ClearingSystemMemberIdentification2Type $clrSysMmbId)
     {
         $this->clrSysMmbId = $clrSysMmbId;
         return $this;
@@ -104,7 +104,7 @@ class FinancialInstitutionIdentification8Type
     /**
      * Gets as pstlAdr
      *
-     * @return \App\Model\Sepa\PainModel\PostalAddress6Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type
      */
     public function getPstlAdr()
     {
@@ -114,10 +114,10 @@ class FinancialInstitutionIdentification8Type
     /**
      * Sets a new pstlAdr
      *
-     * @param \App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr
      * @return self
      */
-    public function setPstlAdr(\App\Model\Sepa\PainModel\PostalAddress6Type $pstlAdr)
+    public function setPstlAdr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\PostalAddress6Type $pstlAdr)
     {
         $this->pstlAdr = $pstlAdr;
         return $this;
@@ -126,7 +126,7 @@ class FinancialInstitutionIdentification8Type
     /**
      * Gets as othr
      *
-     * @return \App\Model\Sepa\PainModel\GenericFinancialIdentification1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericFinancialIdentification1Type
      */
     public function getOthr()
     {
@@ -136,10 +136,10 @@ class FinancialInstitutionIdentification8Type
     /**
      * Sets a new othr
      *
-     * @param \App\Model\Sepa\PainModel\GenericFinancialIdentification1Type $othr
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericFinancialIdentification1Type $othr
      * @return self
      */
-    public function setOthr(\App\Model\Sepa\PainModel\GenericFinancialIdentification1Type $othr)
+    public function setOthr(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\GenericFinancialIdentification1Type $othr)
     {
         $this->othr = $othr;
         return $this;

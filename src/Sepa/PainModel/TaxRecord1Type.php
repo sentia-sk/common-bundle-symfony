@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxRecord1Type
@@ -41,12 +41,12 @@ class TaxRecord1Type
     private $frmsCd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxPeriod1Type $prd
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd
      */
     private $prd = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxAmount1Type $taxAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmount1Type $taxAmt
      */
     private $taxAmt = null;
 
@@ -190,7 +190,7 @@ class TaxRecord1Type
     /**
      * Gets as prd
      *
-     * @return \App\Model\Sepa\PainModel\TaxPeriod1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type
      */
     public function getPrd()
     {
@@ -200,10 +200,10 @@ class TaxRecord1Type
     /**
      * Sets a new prd
      *
-     * @param \App\Model\Sepa\PainModel\TaxPeriod1Type $prd
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd
      * @return self
      */
-    public function setPrd(\App\Model\Sepa\PainModel\TaxPeriod1Type $prd)
+    public function setPrd(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxPeriod1Type $prd)
     {
         $this->prd = $prd;
         return $this;
@@ -212,7 +212,7 @@ class TaxRecord1Type
     /**
      * Gets as taxAmt
      *
-     * @return \App\Model\Sepa\PainModel\TaxAmount1Type
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmount1Type
      */
     public function getTaxAmt()
     {
@@ -222,10 +222,10 @@ class TaxRecord1Type
     /**
      * Sets a new taxAmt
      *
-     * @param \App\Model\Sepa\PainModel\TaxAmount1Type $taxAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmount1Type $taxAmt
      * @return self
      */
-    public function setTaxAmt(\App\Model\Sepa\PainModel\TaxAmount1Type $taxAmt)
+    public function setTaxAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxAmount1Type $taxAmt)
     {
         $this->taxAmt = $taxAmt;
         return $this;

@@ -1,5 +1,5 @@
 <?php
-namespace App\Model\Sepa\PainModel;
+namespace SentiaSk\CommonBundleSymfony\Sepa\PainModel;
 
 /**
  * Class representing TaxAmount1Type
@@ -16,17 +16,17 @@ class TaxAmount1Type
     private $rate = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt
      */
     private $taxblBaseAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt
      */
     private $ttlAmt = null;
 
     /**
-     * @property \App\Model\Sepa\PainModel\TaxRecordDetails1Type[] $dtls
+     * @property \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecordDetails1Type[] $dtls
      */
     private $dtls = null;
 
@@ -55,7 +55,7 @@ class TaxAmount1Type
     /**
      * Gets as taxblBaseAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getTaxblBaseAmt()
     {
@@ -65,10 +65,10 @@ class TaxAmount1Type
     /**
      * Sets a new taxblBaseAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt
      * @return self
      */
-    public function setTaxblBaseAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt)
+    public function setTaxblBaseAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $taxblBaseAmt)
     {
         $this->taxblBaseAmt = $taxblBaseAmt;
         return $this;
@@ -77,7 +77,7 @@ class TaxAmount1Type
     /**
      * Gets as ttlAmt
      *
-     * @return \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType
      */
     public function getTtlAmt()
     {
@@ -87,10 +87,10 @@ class TaxAmount1Type
     /**
      * Sets a new ttlAmt
      *
-     * @param \App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt
      * @return self
      */
-    public function setTtlAmt(\App\Model\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt)
+    public function setTtlAmt(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType $ttlAmt)
     {
         $this->ttlAmt = $ttlAmt;
         return $this;
@@ -99,10 +99,10 @@ class TaxAmount1Type
     /**
      * Adds as dtls
      *
-     * @param \App\Model\Sepa\PainModel\TaxRecordDetails1Type $dtls
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecordDetails1Type $dtls
      *@return self
      */
-    public function addToDtls(\App\Model\Sepa\PainModel\TaxRecordDetails1Type $dtls)
+    public function addToDtls(\SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecordDetails1Type $dtls)
     {
         $this->dtls[] = $dtls;
         return $this;
@@ -133,7 +133,7 @@ class TaxAmount1Type
     /**
      * Gets as dtls
      *
-     * @return \App\Model\Sepa\PainModel\TaxRecordDetails1Type[]
+     * @return \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecordDetails1Type[]
      */
     public function getDtls()
     {
@@ -143,7 +143,7 @@ class TaxAmount1Type
     /**
      * Sets a new dtls
      *
-     * @param \App\Model\Sepa\PainModel\TaxRecordDetails1Type[] $dtls
+     * @param \SentiaSk\CommonBundleSymfony\Sepa\PainModel\TaxRecordDetails1Type[] $dtls
      * @return self
      */
     public function setDtls(array $dtls)
