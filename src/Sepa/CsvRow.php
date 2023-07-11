@@ -44,11 +44,23 @@ class CsvRow extends AbstractTransaction
     /**
      * @throws Exception
      */
-    public static function createFromCsv(string $row): self {
+    public static function createFromCsv(string $row): self
+    {
         $c = explode(";", $row);
         if (count($c) < 11) {
-            throw new Exception('Zlý formát, riadok: '.(self::$rowCounter + 1));
+            throw new Exception('Zlý formát, riadok: ' . (self::$rowCounter + 1));
         }
-        return new self($c[0], $c[1], $c[3], (float)$c[4], new DateTime($c[5]), $c[7], $c[6], $c[8], $c[9], $c[10]);
+        return new self(
+            str_replace(' ', '', $c[0]),
+            str_replace(' ', '', $c[1]),
+            $c[3],
+            (float)$c[4],
+            new DateTime($c[5]),
+            $c[7],
+            $c[6],
+            $c[8],
+            $c[9],
+            $c[10]
+        );
     }
 }
