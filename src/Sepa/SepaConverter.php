@@ -235,13 +235,13 @@ class SepaConverter
         if ($transaction->prikazcaUcet !== $deptorIBAN) {
             if ($transaction instanceof Transaction) {
                 throw new BadRequestSepaException(
-                    frontEndMessage: 'Účet príkazcu(odberateľa nie je rovnaký',
+                    frontEndMessage: 'Účet príkazcu(odberateľa) nie je rovnaký',
                 );
             }
 
             if ($transaction instanceof CsvRow) {
                 throw new BadRequestSepaException(
-                    frontEndMessage: 'Účet príkazcu nie je rovnaký, riadok: ' . $transaction->rowNumber
+                    frontEndMessage: 'Účet príkazcu(odberateľa) nie je rovnaký, riadok: ' . $transaction->rowNumber
                 );
             }
         }
