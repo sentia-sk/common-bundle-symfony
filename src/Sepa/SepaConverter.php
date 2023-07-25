@@ -6,6 +6,7 @@ namespace SentiaSk\CommonBundleSymfony\Sepa;
 
 use DateTime;
 use Exception;
+use SentiaSk\CommonBundleSymfony\Sepa\Exception\BadRequestSepaException;
 use SentiaSk\CommonBundleSymfony\Sepa\PainModel\AccountIdentification4ChoiceType;
 use SentiaSk\CommonBundleSymfony\Sepa\PainModel\ActiveOrHistoricCurrencyAndAmountType;
 use SentiaSk\CommonBundleSymfony\Sepa\PainModel\AmountType3ChoiceType;
@@ -233,19 +234,25 @@ class SepaConverter
     ): void {
         if ($transaction->prikazcaUcet !== $deptorIBAN) {
             if ($transaction instanceof Transaction) {
-                throw new Exception('Účet príkazcu nie je rovnaký, invoice uuid: ' . $transaction->uuid->toRfc4122());
+                throw new BadRequestSepaException(
+                    frontEndMessage: 'Účet príkazcu(odberateľa nie je rovnaký',
+                );
             }
 
             if ($transaction instanceof CsvRow) {
-                throw new Exception('Účet príkazcu nie je rovnaký, riadok: ' . $transaction->rowNumber);
+                throw new BadRequestSepaException(
+                    frontEndMessage: 'Účet príkazcu nie je rovnaký, riadok: ' . $transaction->rowNumber
+                );
             }
         }
         if ($transaction->datumPrevodu->format('Y-m-d') !== $deptorExecutionDate->format('Y-m-d')) {
             if ($transaction instanceof Transaction) {
-                throw new Exception('Dátum prevodu nie je rovnaký, invoice uuid: ' . $transaction->uuid->toRfc4122());
+                throw new BadRequestSepaException(frontEndMessage: 'Dátum prevodu nie je rovnaký');
             }
             if ($transaction instanceof CsvRow) {
-                throw new Exception('Dátum prevodu nie je rovnaký, riadok: ' . $transaction->rowNumber);
+                throw new BadRequestSepaException(
+                    frontEndMessage: 'Dátum prevodu nie je rovnaký, riadok: ' . $transaction->rowNumber
+                );
             }
         }
     }

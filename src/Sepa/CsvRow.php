@@ -4,6 +4,7 @@ namespace SentiaSk\CommonBundleSymfony\Sepa;
 
 use DateTime;
 use Exception;
+use SentiaSk\CommonBundleSymfony\Sepa\Exception\BadRequestSepaException;
 use Symfony\Component\Uid\Uuid;
 
 class CsvRow extends AbstractTransaction
@@ -48,7 +49,7 @@ class CsvRow extends AbstractTransaction
     {
         $c = explode(";", $row);
         if (count($c) < 11) {
-            throw new Exception('Zlý formát, riadok: ' . (self::$rowCounter + 1));
+            throw new BadRequestSepaException(frontEndMessage: 'Zlý formát, riadok: ' . (self::$rowCounter + 1));
         }
         return new self(
             str_replace(' ', '', $c[0]),
