@@ -49,4 +49,5 @@ class BaseException extends \RuntimeException implements CustomExceptionInterfac
         $lastTrace['args'] = $resolvedArgs;
         return $lastTrace;
     }
+
 }
