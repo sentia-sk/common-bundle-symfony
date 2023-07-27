@@ -6,12 +6,13 @@ namespace SentiaSk\CommonBundleSymfony\Exception;
 
 class BaseException extends \RuntimeException implements CustomExceptionInterface
 {
+    protected string $commonCodeMessage = '';
 
-    public function getCustomMessage(string $param): ?string
+    public function getCustomMessage(): ?string
     {
         $lastTrace = $this->getFromTrace();
         $array['message'] = sprintf(
-            '%s - %s - Generated: ' . $param . ' in %s->%s() with args: %s - Line: %d',
+            '%s - %s - Generated: ' . $this->commonCodeMessage . ' in %s->%s() with args: %s - Line: %d',
             $this->getFrontEndMessage(),
             $this->message,
             $lastTrace['class'] ?? '',
