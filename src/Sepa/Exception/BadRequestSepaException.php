@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\Sepa\Exception;
 
-use SentiaSk\CommonBundleSymfony\CustomExceptionInterface;
+use SentiaSk\CommonBundleSymfony\Exception\CustomExceptionInterface;
 use Throwable;
 
 class BadRequestSepaException extends \RuntimeException implements CustomExceptionInterface
