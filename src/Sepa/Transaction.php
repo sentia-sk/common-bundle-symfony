@@ -13,6 +13,7 @@ class Transaction extends AbstractTransaction
      * @throws \Exception
      */
     public function __construct(
+        public string $className,
         public Uuid $uuid,
         public string $prikazcaUcet,
         public string $prijemcaUcet,
@@ -25,7 +26,7 @@ class Transaction extends AbstractTransaction
         public string|null $popis = null,
         public string|null $popis2 = null
     ) {
-        $this->prijemcaBanka = SwiftConverter::convert($this->prijemcaUcet, $this->uuid);
+        $this->prijemcaBanka = SwiftConverter::convert($this->prijemcaUcet, $this->uuid, $this->className);
         parent::__construct(
             $this->prikazcaUcet,
             $this->prijemcaUcet,
@@ -40,22 +41,23 @@ class Transaction extends AbstractTransaction
         );
     }
 
-    public static function createFromInvoice(InvoiceInterface $invoice): self
+    public static function create(TransactionInterface $transaction): self
     {
         /** @var DateTime $paymentAt */
-        $paymentAt = $invoice->getPaymentAt();
+        $paymentAt = $transaction->getPaymentAt();
         return new self(
-            $invoice->getUuid(),
-            str_replace(' ', '', $invoice->getCustomerIban()),
-            str_replace(' ', '', $invoice->getSupplierIban()),
+            $transaction->getClassName(),
+            $transaction->getUuid(),
+            str_replace(' ', '', $transaction->getCustomerIban()),
+            str_replace(' ', '', $transaction->getSupplierIban()),
             'EUR',
-            $invoice->getPrice(),
+            $transaction->getPrice(),
             $paymentAt->modify('00:00:00'),
-            $invoice->getVariableSymbol(),
-            $invoice->getConstantSymbol(),
-            $invoice->getSpecificSymbol(),
-            $invoice->getPaymentNote(),
-            $invoice->getPaymentNote()
+            $transaction->getVariableSymbol(),
+            $transaction->getConstantSymbol(),
+            $transaction->getSpecificSymbol(),
+            $transaction->getPaymentNote(),
+            $transaction->getPaymentNote()
         );
     }
 }

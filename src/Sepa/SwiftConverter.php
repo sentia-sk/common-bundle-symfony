@@ -20,17 +20,17 @@ class SwiftConverter
     /**
      * @throws Exception
      */
-    public static function convert(string $iban, Uuid|int $invoiceUuidOrRow): string
+    public static function convert(string $iban, Uuid|int $uuidOrRow, string $className = null): string
     {
         if (!self::$banks) {
             self::init();
         }
         if (strlen($iban) !== 24) {
             throw new Exception(
-                'Zlý formát IBAN: ' . $iban .
-                ($invoiceUuidOrRow instanceof Uuid
-                    ? ('uuid: ' . $invoiceUuidOrRow->toRfc4122())
-                    : ('riadok: ' . $invoiceUuidOrRow))
+                'Zlý formát IBAN: ' . $iban . ' '
+                ($uuidOrRow instanceof Uuid
+                    ? ($className . ' uuid: ' . $uuidOrRow->toRfc4122())
+                    : ('riadok: ' . $uuidOrRow))
             );
         }
         $bankCode = substr($iban, 4, 4);
@@ -39,9 +39,9 @@ class SwiftConverter
         }
         throw new Exception(
             'Neviem nájsť SWIFT podľa IBAN: ' . $iban .
-            ($invoiceUuidOrRow instanceof Uuid
-                ? ('uuid: ' . $invoiceUuidOrRow->toRfc4122())
-                : ('riadok: ' . $invoiceUuidOrRow))
+            ($uuidOrRow instanceof Uuid
+                ? ($className . ' uuid: ' . $uuidOrRow->toRfc4122())
+                : ('riadok: ' . $uuidOrRow))
         );
     }
 

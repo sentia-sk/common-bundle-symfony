@@ -101,4 +101,9 @@ class ObjectToXML
     {
         return $this->dom->saveXML() ?: '';
     }
+
+    public function save(string $filename): false|int
+    {
+        return $this->dom->save($filename);
+    }
 }

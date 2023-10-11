@@ -49,7 +49,7 @@ class SepaConverter
         $deptorExecutionDate = $transaction->datumPrevodu;
         $deptorIBAN = $transaction->prikazcaUcet;
         if ($transaction instanceof Transaction) {
-            $deptorSWIFT = SwiftConverter::convert($transaction->prikazcaUcet, $transaction->uuid);
+            $deptorSWIFT = SwiftConverter::convert($transaction->prikazcaUcet, $transaction->uuid, $transaction->className);
         }
         if ($transaction instanceof CsvRow) {
             $deptorSWIFT = SwiftConverter::convert($transaction->prikazcaUcet, $transaction->rowNumber);
