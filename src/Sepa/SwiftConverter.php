@@ -27,7 +27,7 @@ class SwiftConverter
         }
         if (strlen($iban) !== 24) {
             throw new Exception(
-                'Zlý formát IBAN: ' . $iban . ' '
+                'Zlý formát IBAN: ' . $iban . ' ' .
                 ($uuidOrRow instanceof Uuid
                     ? ($className . ' uuid: ' . $uuidOrRow->toRfc4122())
                     : ('riadok: ' . $uuidOrRow))
@@ -38,7 +38,7 @@ class SwiftConverter
             return self::$banks[$bankCode]->swift;
         }
         throw new Exception(
-            'Neviem nájsť SWIFT podľa IBAN: ' . $iban .
+            'Neviem nájsť SWIFT podľa IBAN: ' . $iban . ' ' .
             ($uuidOrRow instanceof Uuid
                 ? ($className . ' uuid: ' . $uuidOrRow->toRfc4122())
                 : ('riadok: ' . $uuidOrRow))
