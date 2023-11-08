@@ -20,6 +20,8 @@ enum BrokerAwsSettings: string implements TranslatableInterface
     case S3AccessKey = 'S3AccessKey';
     case S3SecretKey = 'S3SecretKey';
     case S3Region = 'S3Region';
+    case S3PrivateBucket = 'S3PrivateBucket';
+    case S3PublicBucket = 'S3PublicBucket';
 
     public function nameTransId(): string
     {
@@ -28,6 +30,8 @@ enum BrokerAwsSettings: string implements TranslatableInterface
             self::S3AccessKey => 'cl.aws_setting.s3_access_key',
             self::S3SecretKey => 'cl.aws_setting.s3_secret_key',
             self::S3Region => 'cl.aws_setting.s3_region',
+            self::S3PrivateBucket => 'cl.aws_setting.s3_private_bucket',
+            self::S3PublicBucket => 'cl.aws_setting.s3_public_bucket',
         };
     }
 
