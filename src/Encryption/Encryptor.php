@@ -13,9 +13,8 @@ class Encryptor
     private ?KmsClient $kmsClient = null;
     private ?string $key = null;
 
-    public function createClient(
-        array $arrayKeys,
-    ) {
+    public function createClient(array $arrayKeys)
+    {
         $exceptionMessage = null;
         $brokerSettings = [];
         foreach ($arrayKeys as $key => $value) {
@@ -41,14 +40,10 @@ class Encryptor
     }
 
     public function encryptValue(
-        array $arrayKeys,
         ?string $value = null
     ): ?string {
         if ($value === null) {
             return null;
-        }
-        if ($this->kmsClient === null) {
-            $this->createClient($arrayKeys);
         }
         $result = $this->kmsClient->encrypt([
             'KeyId' => $this->key,
