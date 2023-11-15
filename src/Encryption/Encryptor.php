@@ -7,6 +7,7 @@ namespace SentiaSk\CommonBundleSymfony\Encryption;
 use Aws\Kms\KmsClient;
 use SentiaSk\CommonBundleSymfony\Encryption\Enum\BrokerAwsSettings;
 use SentiaSk\CommonBundleSymfony\Sepa\Exception\AwsKeyValueException;
+use App\Document\EmbeddedCommon\MKeyValue;
 
 class Encryptor
 {
@@ -17,12 +18,14 @@ class Encryptor
     {
         $exceptionMessage = null;
         $brokerSettings = [];
-        foreach ($arrayKeys as $key => $value) {
+        /** @var MKeyValue $MkeyValue */
+        foreach ($arrayKeys as $MkeyValue) {
+            $value = $MkeyValue->getValue();
             if (!BrokerAwsSettings::tryFrom($value)) {
                 $exceptionMessage .= ' Aws key: ' . $value;
                 continue;
             }
-            $brokerSettings[$key] = $value;
+            $brokerSettings[$MkeyValue->getKey()] = $value;
         }
         if ($exceptionMessage) {
             throw new AwsKeyValueException($exceptionMessage . ' not found');
