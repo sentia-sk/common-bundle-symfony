@@ -21,11 +21,12 @@ class Encryptor
         /** @var MKeyValue $MkeyValue */
         foreach ($arrayKeys as $MkeyValue) {
             $value = $MkeyValue->getValue();
-            if (!BrokerAwsSettings::tryFrom($value)) {
-                $exceptionMessage .= ' Aws key: ' . $value;
+            $key = $MkeyValue->getKey();
+            if (!BrokerAwsSettings::tryFrom($key)) {
+                $exceptionMessage .= ' Aws key: ' . $key;
                 continue;
             }
-            $brokerSettings[$MkeyValue->getKey()] = $value;
+            $brokerSettings[$key] = $value;
         }
         if ($exceptionMessage) {
             throw new AwsKeyValueException($exceptionMessage . ' not found');
