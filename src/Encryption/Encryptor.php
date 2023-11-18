@@ -56,4 +56,18 @@ class Encryptor
 
         return $result['CiphertextBlob'];
     }
+
+    public function decryptValue(
+        ?string $value = null
+    ): ?string {
+        if ($value === null) {
+            return null;
+        }
+        $result = $this->kmsClient->decrypt([
+            'KeyId' => $this->key,
+            'CiphertextBlob' => $value
+        ]);
+
+        return $result['Plaintext'];
+    }
 }
