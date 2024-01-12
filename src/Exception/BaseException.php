@@ -12,7 +12,7 @@ class BaseException extends \RuntimeException implements CustomExceptionInterfac
     {
         $lastTrace = $this->getFromTrace();
         $array['message'] = sprintf(
-            '%s - %s - Generated: ' . $this->commonCodeMessage . ' in %s->%s() with args: %s - Line: %d',
+            '%s - %s - DEBUG INFO: [' . $this->commonCodeMessage . '] in %s->%s() with args: %s - Line: %d',
             $this->getFrontEndMessage(),
             $this->message,
             $lastTrace['class'] ?? '',
