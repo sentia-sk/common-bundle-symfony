@@ -35,7 +35,7 @@ enum BrokerAwsSettings: string implements TranslatableInterface
         };
     }
 
-    public static function getAllAsCodeList(TranslatorInterface $translator): array
+    public static function getAllAsTranslatedCodeList(TranslatorInterface $translator): array
     {
         $ret = [];
         foreach (self::cases() as $case) {
