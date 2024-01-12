@@ -30,9 +30,9 @@ class AmazonS3
      * @param string $storageTargetPath - full path to the file we want to create: 'dir1/dir2/dir3/filename.ext'
      * @param string $localTargetPath - full path to the source file: 'c:/dirx/diry/file.ext'
      */
-    public function uploadFile(string $bucket, string $storageTargetPath, string $localTargetPath): void
+    public function uploadFile(string $bucket, string $storageTargetPath, string $localTargetPath): object
     {
-        $this->s3Client->putObject([
+        return $this->s3Client->putObject([
             'Bucket' => $bucket,
             'Key' => $storageTargetPath,
             'Body' => fopen($localTargetPath, 'r'),
@@ -67,7 +67,7 @@ class AmazonS3
             throw new Exception('File is corrupted or cannot be downloaded');
         }
 
-        return $result['Body']."\n";
+        return $result['Body'] . "\n";
     }
 
     public function deleteFile(string $bucket, string $storageTargetPath): void
