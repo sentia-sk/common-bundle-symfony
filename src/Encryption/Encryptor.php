@@ -14,7 +14,7 @@ class Encryptor
     private ?KmsClient $kmsClient = null;
     private ?string $key = null;
 
-    public function createClient(array $arrayKeys)
+    public function createClient(array $arrayKeys): void
     {
         $exceptionMessage = null;
         $brokerSettings = [];

@@ -14,7 +14,7 @@ class AmazonS3
     private S3Client $s3Client;
     private const ACL = 'bucket-owner-full-control';
 
-    public function createClient(array $awsKeys)
+    public function createClient(array $awsKeys): void
     {
         $exceptionMessage = null;
         $brokerSettings = [];
