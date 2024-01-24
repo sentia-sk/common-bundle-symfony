@@ -6,24 +6,45 @@ namespace SentiaSk\CommonBundleSymfony\FileStorage;
 
 use Aws\S3\S3Client;
 use Exception;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+use SentiaSk\CommonBundleSymfony\Encryption\Enum\BrokerAwsSettings;
+use SentiaSk\CommonBundleSymfony\Sepa\Exception\AwsKeyValueException;
 
 class AmazonS3
 {
     private S3Client $s3Client;
     private const ACL = 'bucket-owner-full-control';
 
-    public function __construct(
-        private readonly ParameterBagInterface $params,
-    ) {
+    public function createClient(array $awsKeys)
+    {
+        $exceptionMessage = null;
+        $brokerSettings = [];
+        foreach ($awsKeys as $awsKey) {
+            $value = $awsKey->getValue();
+            $key = $awsKey->getKey();
+            if (!BrokerAwsSettings::tryFrom($key)) {
+                $exceptionMessage .= ' Aws key: ' . $key;
+                continue;
+            }
+            $brokerSettings[$key] = $value;
+        }
+        if ($exceptionMessage) {
+            throw new AwsKeyValueException($exceptionMessage . ' not found');
+        }
+
         $this->s3Client = new S3Client([
             'credentials' => [
-                'key' => $this->params->get('aws_access_key'),
-                'secret' => $this->params->get('aws_secret_key')
+                'key' => $brokerSettings[BrokerAwsSettings::S3AccessKey->value],
+                'secret' => $brokerSettings[BrokerAwsSettings::S3SecretKey->value]
             ],
-            'region' => $this->params->get('aws_region'),
+            'region' => $brokerSettings[BrokerAwsSettings::S3Region->value],
             'version' => 'latest'
         ]);
+
+    }
+
+    public function listBuckets()
+    {
+        return $this->s3Client->listBuckets();
     }
 
     /**
