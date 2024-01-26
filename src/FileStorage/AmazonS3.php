@@ -14,7 +14,7 @@ class AmazonS3
     private S3Client $s3Client;
     private const ACL = 'bucket-owner-full-control';
 
-    public function createClient(array $awsKeys): void
+    public function createClientAndResolveKeys(array $awsKeys): void
     {
         $exceptionMessage = null;
         $brokerSettings = [];
@@ -31,6 +31,11 @@ class AmazonS3
             throw new AwsKeyValueException($exceptionMessage . ' not found');
         }
 
+        $this->createClientFromArray($brokerSettings);
+    }
+
+    public function createClientFromArray(array $brokerSettings): void
+    {
         $this->s3Client = new S3Client([
             'credentials' => [
                 'key' => $brokerSettings[BrokerAwsSettings::S3AccessKey->value],
@@ -39,8 +44,8 @@ class AmazonS3
             'region' => $brokerSettings[BrokerAwsSettings::S3Region->value],
             'version' => 'latest'
         ]);
-
     }
+
 
     public function listBuckets()
     {
