@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SentiaSk\CommonBundleSymfony\Encryption\Enum;
 
 use App\Enum\CodelistTrait;
+use App\Enum\TransEnumTrait;
 use Symfony\Contracts\Translation\TranslatableInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -15,6 +16,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 enum BrokerAwsSettings: string implements TranslatableInterface
 {
     use CodelistTrait;
+    use TransEnumTrait;
 
     case KmsKeyArn = 'kmsKeyArn';
     case S3AccessKey = 'S3AccessKey';
