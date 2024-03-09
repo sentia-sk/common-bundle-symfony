@@ -13,7 +13,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  * nastavenia pre brokera
  * FE by mal byt urobeny tak, ze po doplneni dalsieho parametra do tohto Enumu, tam netreba nic robit.
  */
-enum BrokerAwsSettings: string implements TranslatableInterface
+enum BrokerAwsSettings: string
 {
     use CodelistTrait;
     use TransEnumTrait;
