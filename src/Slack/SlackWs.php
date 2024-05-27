@@ -60,6 +60,7 @@ class SlackWs
         $email->from('rosetta@sentia.sk')
         ->addTo('stefan.soltys@sentia.sk')
         ->addTo('branislav.bobak@sentia.sk')
+        ->addTo('martin.cigarsky@sentia.sk')
         ->addTo('diana.kokolusova@sentia.sk')
         ->subject((strtolower($this->params->get('app_env')) === 'prod' ? '[PROD]' : ' [TEST]') . ' ' . $subject)
         ->text($message);
