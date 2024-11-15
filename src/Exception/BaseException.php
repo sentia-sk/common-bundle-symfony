@@ -21,12 +21,12 @@ class BaseException extends \RuntimeException implements CustomExceptionInterfac
             $this->getLine()
         );
 
-        return json_encode($array) ?: '';
+        return json_encode($array, JSON_UNESCAPED_UNICODE) ?: '';
     }
 
     public function getFrontEndMessage(): ?string
     {
-        return json_encode(['message' => $this->frontEndMessage ?? '']) ?: '';
+        return json_encode(['message' => $this->frontEndMessage ?? ''],JSON_UNESCAPED_UNICODE) ?: '';
     }
 
     protected function getFromTrace(): array
@@ -41,7 +41,7 @@ class BaseException extends \RuntimeException implements CustomExceptionInterfac
                 continue;
             }
             if (is_array($args)) {
-                $resolvedArgs[$key] = json_encode($args);
+                $resolvedArgs[$key] = json_encode($args,JSON_UNESCAPED_UNICODE);
                 continue;
             }
             $resolvedArgs[$key] = $args;
