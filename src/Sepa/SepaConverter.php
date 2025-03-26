@@ -69,13 +69,13 @@ class SepaConverter
             $this->checkConsistency($transaction, $deptorIBAN, $deptorExecutionDate);
 
             $amount = $this->createAmount($transaction);
-            $creditAgent = $this->createCreditAgent($transaction);
+//            $creditAgent = $this->createCreditAgent($transaction);
             $creditParty = $this->createCreditParty($transaction);
             $cashAccount = $this->createCashAccount($transaction);
             $trans = $this->createCreditTransferTransaction(
                 $transaction,
                 $amount,
-                $creditAgent,
+//                $creditAgent,
                 $creditParty,
                 $cashAccount
             );
@@ -118,7 +118,7 @@ class SepaConverter
     private function createCreditTransferTransaction(
         AbstractTransaction $transaction,
         ActiveOrHistoricCurrencyAndAmountType $amount,
-        BranchAndFinancialInstitutionIdentification5Type $creditAgent,
+//        BranchAndFinancialInstitutionIdentification5Type $creditAgent,
         PartyIdentification43Type $creditParty,
         CashAccount24Type $cashAccount
     ): CreditTransferTransaction6Type {
@@ -127,7 +127,7 @@ class SepaConverter
             ->setAmt(new AmountType3ChoiceType())
             ->setRmtInf(new RemittanceInformation7Type())
             ->setChrgBr('SLEV')
-            ->setCdtrAgt($creditAgent)
+//            ->setCdtrAgt($creditAgent)
             ->setCdtr($creditParty)
             ->setCdtrAcct($cashAccount);
         $trans->getPmtId()->setEndToEndId($this->createEndToEnd($transaction));

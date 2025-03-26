@@ -27,7 +27,6 @@ class CsvRow extends AbstractTransaction
         public string|null $popis = null,
         public string|null $popis2 = null
     ) {
-        $this->prijemcaBanka = SwiftConverter::convert($this->prijemcaUcet, $this->rowNumber);
         parent::__construct(
             $this->prikazcaUcet,
             $this->prijemcaUcet,
