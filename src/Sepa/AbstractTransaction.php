@@ -12,7 +12,7 @@ class AbstractTransaction
         public string $prikazcaUcet,
         public string $prijemcaUcet,
         public string $mena,
-        public float $suma,
+        public int $suma,
         public DateTime $datumPrevodu,
         public string $vs,
         public string|null $ks = null,

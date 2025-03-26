@@ -18,7 +18,7 @@ class Transaction extends AbstractTransaction
         public string $prikazcaUcet,
         public string $prijemcaUcet,
         public string $mena,
-        public float $suma,
+        public int $suma,
         public DateTime $datumPrevodu,
         public string $vs,
         public string|null $ks = null,
@@ -26,7 +26,6 @@ class Transaction extends AbstractTransaction
         public string|null $popis = null,
         public string|null $popis2 = null
     ) {
-        $this->prijemcaBanka = SwiftConverter::convert($this->prijemcaUcet, $this->uuid, $this->className);
         parent::__construct(
             $this->prikazcaUcet,
             $this->prijemcaUcet,

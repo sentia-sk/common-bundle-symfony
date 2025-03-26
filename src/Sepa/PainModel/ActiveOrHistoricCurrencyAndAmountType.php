@@ -11,7 +11,7 @@ class ActiveOrHistoricCurrencyAndAmountType
 {
 
     /**
-     * @property float $__value
+     * @property string $__value
      */
     private $__value = null;
 
@@ -23,7 +23,7 @@ class ActiveOrHistoricCurrencyAndAmountType
     /**
      * Construct
      *
-     * @param float $value
+     * @param string $value
      */
     public function __construct($value)
     {
@@ -33,8 +33,8 @@ class ActiveOrHistoricCurrencyAndAmountType
     /**
      * Gets or sets the inner value
      *
-     * @param float $value
-     * @return float
+     * @param string $value
+     * @return string
      */
     public function value()
     {

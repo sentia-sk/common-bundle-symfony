@@ -28,17 +28,18 @@ use SentiaSk\CommonBundleSymfony\Sepa\PainModel\ServiceLevel8ChoiceType;
 class SepaConverter
 {
 
-    const PRIKAZCA = 'Sentia s.r.o.';
+    public string $prikazca;
 
     private array $transactions = array();
 
-    private float $controlSum = 0.0;
+    private int $controlSum = 0;
 
     /**
      * @throws Exception
      */
-    public function createPainModel(): Document
+    public function createPainModel(string $prikazca = 'Sentia s.r.o.'): Document
     {
+        $this->prikazca = $prikazca;
         /** @var DateTime $stamp */
         $stamp = DateTime::createFromFormat('U.u', (string)microtime(true));
         if (!array_key_exists('0', $this->transactions)) {
@@ -48,26 +49,18 @@ class SepaConverter
         $transaction = $this->transactions[0];
         $deptorExecutionDate = $transaction->datumPrevodu;
         $deptorIBAN = $transaction->prikazcaUcet;
-        if ($transaction instanceof Transaction) {
-            $deptorSWIFT = SwiftConverter::convert($transaction->prikazcaUcet, $transaction->uuid, $transaction->className);
-        }
-        if ($transaction instanceof CsvRow) {
-            $deptorSWIFT = SwiftConverter::convert($transaction->prikazcaUcet, $transaction->rowNumber);
-        }
 
         $authChoiceType = $this->createAuthChoiceType();
         $party = $this->createPartyIdentification();
         $header = $this->createHeader($stamp, $authChoiceType, $party);
         $paymentType = $this->createPaymentType();
         $account = $this->createCashAcount($deptorIBAN);
-        $debtorAgent = $this->createDeptorAgent($deptorSWIFT);
         $payment = $this->createPaymentInstruction(
             $stamp,
             $paymentType,
             $deptorExecutionDate,
             $party,
             $account,
-            $debtorAgent
         );
 
         $document = $this->createDomDocument($header, $payment);
@@ -118,7 +111,7 @@ class SepaConverter
 
     private function createAmount(AbstractTransaction $transaction): ActiveOrHistoricCurrencyAndAmountType
     {
-        return (new ActiveOrHistoricCurrencyAndAmountType($transaction->suma))
+        return (new ActiveOrHistoricCurrencyAndAmountType(StringNumberModifier::intToStringModify($transaction->suma)))
             ->setCcy($transaction->mena);
     }
 
@@ -152,7 +145,7 @@ class SepaConverter
     private function createPartyIdentification(): PartyIdentification43Type
     {
         return (new PartyIdentification43Type())
-            ->setNm(self::PRIKAZCA);
+            ->setNm($this->prikazca);
     }
 
     private function createHeader(
@@ -165,7 +158,7 @@ class SepaConverter
             ->setCreDtTm($stamp)
             ->addToAuthstn($auth)
             ->setNbOfTxs((string)count($this->transactions))
-            ->setCtrlSum($this->controlSum)
+            ->setCtrlSum(StringNumberModifier::intToStringModify($this->controlSum))
             ->setInitgPty($party);
     }
 
@@ -186,21 +179,12 @@ class SepaConverter
         return $account;
     }
 
-    private function createDeptorAgent(string $deptorSWIFT): BranchAndFinancialInstitutionIdentification5Type
-    {
-        $debtorAgent = (new BranchAndFinancialInstitutionIdentification5Type())
-            ->setFinInstnId(new FinancialInstitutionIdentification8Type());
-        $debtorAgent->getFinInstnId()->setBICFI($deptorSWIFT);
-        return $debtorAgent;
-    }
-
     private function createPaymentInstruction(
         DateTime $stamp,
         PaymentTypeInformation19Type $paymentType,
         DateTime $deptorExecutionDate,
         PartyIdentification43Type $party,
         CashAccount24Type $account,
-        BranchAndFinancialInstitutionIdentification5Type $debtorAgent,
     ): PaymentInstruction9Type {
         return (new PaymentInstruction9Type())
             ->setPmtInfId('"PMTID-"' . $stamp->format("Y-m-d\TH:i:s.u"))
@@ -209,7 +193,6 @@ class SepaConverter
             ->setReqdExctnDt($deptorExecutionDate)
             ->setDbtr($party)
             ->setDbtrAcct($account)
-            ->setDbtrAgt($debtorAgent)
             ->setChrgBr('SLEV');
     }
 

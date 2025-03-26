@@ -12,7 +12,7 @@ interface TransactionInterface
     public function getCustomerIban(): string;
     public function getClassName(): string;
     public function getSupplierIban(): string;
-    public function getPrice(): float;
+    public function getPrice(): int;
     public function getConstantSymbol(): ?string;
     public function getVariableSymbol(): string;
     public function getSpecificSymbol(): ?string;
