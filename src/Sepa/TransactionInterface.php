@@ -16,5 +16,6 @@ interface TransactionInterface
     public function getConstantSymbol(): ?string;
     public function getVariableSymbol(): string;
     public function getSpecificSymbol(): ?string;
+    public function getCreditorInfo(): ?string;
     public function getPaymentNote(): ?string;
 }

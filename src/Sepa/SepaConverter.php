@@ -98,7 +98,7 @@ class SepaConverter
     private function createCreditParty(AbstractTransaction $transaction): PartyIdentification43Type
     {
         return (new PartyIdentification43Type())
-            ->setNm($transaction->popis);
+            ->setNm($transaction->nazovPrijemcu);
     }
 
     private function createCreditAgent(AbstractTransaction $transaction
@@ -132,7 +132,7 @@ class SepaConverter
             ->setCdtrAcct($cashAccount);
         $trans->getPmtId()->setEndToEndId($this->createEndToEnd($transaction));
         $trans->getAmt()->setInstdAmt($amount);
-        $trans->getRmtInf()->addToUstrd($transaction->popis2);
+        $trans->getRmtInf()->addToUstrd($transaction->informacia);
         return $trans;
     }
 

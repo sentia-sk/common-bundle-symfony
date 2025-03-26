@@ -23,8 +23,8 @@ class Transaction extends AbstractTransaction
         public string $vs,
         public string|null $ks = null,
         public string|null $ss = null,
-        public string|null $popis = null,
-        public string|null $popis2 = null
+        public string|null $nazovPrijemcu = null,
+        public string|null $informacia = null
     ) {
         parent::__construct(
             $this->prikazcaUcet,
@@ -35,8 +35,8 @@ class Transaction extends AbstractTransaction
             $this->vs,
             $this->ks,
             $this->ss,
-            $this->popis,
-            $this->popis2
+            $this->nazovPrijemcu,
+            $this->informacia
         );
     }
 
@@ -55,7 +55,7 @@ class Transaction extends AbstractTransaction
             $transaction->getVariableSymbol(),
             $transaction->getConstantSymbol(),
             $transaction->getSpecificSymbol(),
-            $transaction->getPaymentNote(),
+            $transaction->getCreditorInfo(),
             $transaction->getPaymentNote()
         );
     }

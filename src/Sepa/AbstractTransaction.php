@@ -17,14 +17,14 @@ class AbstractTransaction
         public string $vs,
         public string|null $ks = null,
         public string|null $ss = null,
-        public string|null $popis = null,
-        public string|null $popis2 = null
+        public string|null $nazovPrijemcu = null,
+        public string|null $informacia = null
     ) {
         $this->mena = trim($this->mena);
         $this->ks = $this->ks ? trim($this->ks) : null;
         $this->vs = trim($this->vs);
         $this->ss = $this->ss ? trim($this->ss) : null;
-        $this->popis = $this->popis ? trim($this->popis) : null;
-        $this->popis2 = $this->popis2 ? trim($this->popis2) : null;
+        $this->nazovPrijemcu = $this->nazovPrijemcu ? trim($this->nazovPrijemcu) : null;
+        $this->informacia = $this->informacia ? trim($this->informacia) : null;
     }
 }
