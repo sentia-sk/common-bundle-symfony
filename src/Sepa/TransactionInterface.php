@@ -8,7 +8,7 @@ use Symfony\Component\Uid\Uuid;
 interface TransactionInterface
 {
     public function getPaymentAt(): ?DateTime;
-    public function getUuid(): Uuid;
+    public function getUuid(): string;
     public function getCustomerIban(): string;
     public function getClassName(): string;
     public function getSupplierIban(): string;

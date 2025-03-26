@@ -216,27 +216,22 @@ class SepaConverter
         DateTime $deptorExecutionDate
     ): void {
         if ($transaction->prikazcaUcet !== $deptorIBAN) {
-            if ($transaction instanceof Transaction) {
-                throw new BadRequestSepaException(
-                    frontEndMessage: 'Účet príkazcu(odberateľa) nie je rovnaký',
-                );
-            }
-
             if ($transaction instanceof CsvRow) {
                 throw new BadRequestSepaException(
                     frontEndMessage: 'Účet príkazcu(odberateľa) nie je rovnaký, riadok: ' . $transaction->rowNumber
                 );
             }
+            throw new BadRequestSepaException(
+                frontEndMessage: 'Účet príkazcu(odberateľa) nie je rovnaký',
+            );
         }
         if ($transaction->datumPrevodu->format('Y-m-d') !== $deptorExecutionDate->format('Y-m-d')) {
-            if ($transaction instanceof Transaction) {
-                throw new BadRequestSepaException(frontEndMessage: 'Dátum prevodu nie je rovnaký');
-            }
             if ($transaction instanceof CsvRow) {
                 throw new BadRequestSepaException(
                     frontEndMessage: 'Dátum prevodu nie je rovnaký, riadok: ' . $transaction->rowNumber
                 );
             }
+            throw new BadRequestSepaException(frontEndMessage: 'Dátum prevodu nie je rovnaký');
         }
     }
 

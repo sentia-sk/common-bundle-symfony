@@ -14,7 +14,7 @@ class Transaction extends AbstractTransaction
      */
     public function __construct(
         public string $className,
-        public Uuid $uuid,
+        public string $uuid,
         public string $prikazcaUcet,
         public string $prijemcaUcet,
         public string $mena,
