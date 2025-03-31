@@ -93,7 +93,7 @@ class AmazonS3
             throw new Exception('File is corrupted or cannot be downloaded');
         }
 
-        return $result['Body'] . "\n";
+        return (string)$result['Body'];
     }
 
     public function deleteFile(string $bucket, string $storageTargetPath): void
