@@ -42,7 +42,8 @@ class AmazonS3
                 'secret' => $brokerSettings[BrokerAwsSettings::S3SecretKey->value]
             ],
             'region' => $brokerSettings[BrokerAwsSettings::S3Region->value],
-            'version' => 'latest'
+            'version' => 'latest',
+            'use_aws_shared_config_files' => false
         ]);
     }
 
