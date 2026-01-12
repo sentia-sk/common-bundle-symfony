@@ -24,6 +24,8 @@ enum BrokerAwsSettings: string
     case S3Region = 'S3Region';
     case S3PrivateBucket = 'S3PrivateBucket';
     case S3PublicBucket = 'S3PublicBucket';
+    case SESFromEmailAddress = 'SESFromEmailAddress';
+    case EmailClientType = 'EmailClientType';
 
     public function nameTransId(): string
     {
@@ -34,6 +36,8 @@ enum BrokerAwsSettings: string
             self::S3Region => 'cl.aws_setting.s3_region',
             self::S3PrivateBucket => 'cl.aws_setting.s3_private_bucket',
             self::S3PublicBucket => 'cl.aws_setting.s3_public_bucket',
+            self::SESFromEmailAddress => 'cl.aws_setting.ses_from_email_address',
+            self::EmailClientType => 'cl.aws_setting.email_client_type',
         };
     }
 

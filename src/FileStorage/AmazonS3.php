@@ -7,7 +7,6 @@ namespace SentiaSk\CommonBundleSymfony\FileStorage;
 use Aws\S3\S3Client;
 use Exception;
 use SentiaSk\CommonBundleSymfony\Encryption\Enum\BrokerAwsSettings;
-use SentiaSk\CommonBundleSymfony\Sepa\Exception\AwsKeyValueException;
 
 class AmazonS3
 {
@@ -16,19 +15,14 @@ class AmazonS3
 
     public function createClientAndResolveKeys(array $awsKeys): void
     {
-        $exceptionMessage = null;
         $brokerSettings = [];
         foreach ($awsKeys as $awsKey) {
             $value = $awsKey->getValue();
             $key = $awsKey->getKey();
             if (!BrokerAwsSettings::tryFrom($key)) {
-                $exceptionMessage .= ' Aws key: ' . $key;
                 continue;
             }
             $brokerSettings[$key] = $value;
-        }
-        if ($exceptionMessage) {
-            throw new AwsKeyValueException($exceptionMessage . ' not found');
         }
 
         $this->createClientFromArray($brokerSettings);
