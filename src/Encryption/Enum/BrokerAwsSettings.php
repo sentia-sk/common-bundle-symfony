@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace SentiaSk\CommonBundleSymfony\Encryption\Enum;
 
+use App\Enum\Broker\EmailClientType;
 use App\Enum\CodelistTrait;
+use App\Enum\Common\DataType;
 use App\Enum\TransEnumTrait;
 use Symfony\Contracts\Translation\TranslatableInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -41,13 +43,29 @@ enum BrokerAwsSettings: string
         };
     }
 
+    public function dataType(): DataType
+    {
+        return match ($this) {
+            self::KmsKeyArn, self::S3AccessKey, self::S3SecretKey,
+            self::S3Region, self::S3PrivateBucket, self::S3PublicBucket, self::SESFromEmailAddress => DataType::String,
+
+            self::EmailClientType => DataType::Enum,
+        };
+    }
+
     public static function getAllAsCodeList(TranslatorInterface $translator): array
     {
         $ret = [];
         foreach (self::cases() as $case) {
+            $enumValues = [];
+            if ($case->dataType() === DataType::Enum) {
+                $enumValues = EmailClientType::getAllAsCodeList($translator);
+            }
             $ret[] = [
                 'id' => $case->value,
                 'name' => $case->trans($translator, function: 'nameTransId'),
+                'type' => $case->dataType(),
+                'enumValues' => $enumValues
             ];
         }
         return $ret;
