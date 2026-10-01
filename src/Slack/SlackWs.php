@@ -59,7 +59,6 @@ class SlackWs
         $email = new Email();
         $email->from('rosetta@sentia.sk')
         ->addTo('stefan.soltys@sentia.sk')
-        ->addTo('branislav.bobak@sentia.sk')
         ->addTo('martin.cigarsky@sentia.sk')
         ->subject((strtolower($this->params->get('app_env')) === 'prod' ? '[PROD]' : ' [TEST]') . ' ' . $subject)
         ->text($message);
