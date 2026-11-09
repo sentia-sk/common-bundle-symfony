@@ -54,7 +54,7 @@ class SlackWs
         }
     }
 
-    private function sendToEmail(string $message, string $subject, string $slackWebhook): void
+    public function sendToEmail(string $message, string $subject, string $slackWebhook): void
     {
         $email = new Email();
         $email->from('rosetta@sentia.sk')
